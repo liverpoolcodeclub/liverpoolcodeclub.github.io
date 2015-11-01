@@ -11,6 +11,20 @@
   </head>
   <body {% if page.bodyclass %}class="{{ page.bodyclass }}"{% endif %}>
     {{ content }}
+    <div class="container">
+      <footer class="footer-links">
+        <p class="footer-links__item">
+          <i class="fa fa-twitter"></i>
+          Tweet us:
+          <a href="https://twitter.com/liverpoolcode">@liverpoolcode</a>
+        </p>
+        <p class="footer-links__item">
+          <i class="fa fa-github"></i>
+          Fork us:
+          <a href="https://github.com/liverpoolcodeclub">github.com/liverpoolcodeclub</a>
+        </p>
+      </footer>
+    </div>
     {% comment %}
     <script src="{{ "/assets/js/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
