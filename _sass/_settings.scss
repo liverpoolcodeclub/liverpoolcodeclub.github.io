@@ -1,0 +1,17 @@
+$color-codeclub-green: #393;
+$color-codeclub-lightgreen: #d3e8d0;
+$color-codeclub-palegreen: #f8faf4;
+
+$narrow-gutter: 16px;
+
+$icon-font-path: '../fonts/';
+$fa-font-path: "../fonts/";
+
+$high-dpi-screen: '-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi';
+
+$brand-primary: $color-codeclub-green;
+$body-bg: $color-codeclub-palegreen;
+$font-size-base: 16px;
+$line-height-base: (22/16);
+$headings-font-family: 'Luckiest Guy', sans-serif;
+$screen-lg: 9999px; // disable the top breakpoint, to keep the site at ~1000px on even the widest screens

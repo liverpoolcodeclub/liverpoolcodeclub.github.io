@@ -1,0 +1,13 @@
+# Site settings
+title: Liverpool Code Club
+description: >
+  A fun way for kids to learn programming, through
+  free, weekly classes led by trained professionals.
+  Get creative building games, quizzes and animations.
+  And earn exclusive badges along the way. Coming to
+  Liverpool Central Library in January 2016.
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+host: 0.0.0.0 # zarino.co.uk/post/jekyll-local-network

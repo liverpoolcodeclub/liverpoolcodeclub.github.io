@@ -1,0 +1,99 @@
+.home-hero {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  background: $color-codeclub-green;
+  color: #fff;
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25em;
+  }
+
+  h1 {
+    text-shadow: 0.1em 0.2em 0 darken($color-codeclub-green, 15%);
+  }
+
+  @media (min-width: $screen-sm-min) {
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    h1 {
+      font-size: 4em;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  @media (min-height: 700px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
+.newsletter-signup {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media (min-height: 700px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .container {
+    max-width: 40em;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 200;
+    color: #666;
+    text-shadow: 0 1px 0 #fff;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 1.1em;
+    }
+
+    @media (min-width: $screen-md-min) {
+        font-size: 1.3em;
+    }
+
+    @media (min-height: 700px) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.newsletter-signup__inputs {
+  @include make-row($narrow-gutter);
+
+  label {
+    text-shadow: 0 1px 0 #fff;
+  }
+}
+
+.newsletter-signup__name,
+.newsletter-signup__email {
+  @include make-sm-column(5, $narrow-gutter);
+  margin-top: 1em;
+}
+
+.newsletter-signup__submit {
+  @include make-sm-column(2, $narrow-gutter);
+  margin-top: 1em;
+
+  .btn {
+    margin-top: $line-height-computed + 5px;
+    @extend .btn-block;
+  }
+}
