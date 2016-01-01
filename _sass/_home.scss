@@ -15,6 +15,22 @@
     text-shadow: 0.1em 0.2em 0 darken($color-codeclub-green, 15%);
   }
 
+  .btn {
+    background: #fff;
+    color: $color-codeclub-green;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    margin-top: 0.5em;
+    box-shadow: 0.2em 0.2em 0 darken($color-codeclub-green, 10%);
+    border: none;
+
+    &:hover, &:focus {
+      transform: translate(0, -0.1em);
+      box-shadow: 0.3em 0.4em 0 darken($color-codeclub-green, 5%);
+    }
+  }
+
   @media (min-width: $screen-sm-min) {
     h1 {
       font-size: 3em;
