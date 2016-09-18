@@ -1,6 +1,6 @@
 .home-hero {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
   background: $color-codeclub-green;
   color: #fff;
@@ -13,13 +13,12 @@
 
   h1 {
     text-shadow: 0.1em 0.2em 0 darken($color-codeclub-green, 15%);
+    margin-top: 0;
   }
 
   .btn {
     background: #fff;
     color: $color-codeclub-green;
-    font-size: 0.9em;
-    padding: 0.5em 1em;
     font-weight: bold;
     margin-top: 0.5em;
     box-shadow: 0.2em 0.2em 0 darken($color-codeclub-green, 10%);
@@ -52,19 +51,44 @@
   }
 
   @media (min-height: 700px) {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+
+.home-content {
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  h2 {
+    text-align: center;
+    color: $color-codeclub-green;
+    margin-top: 2em;
+  }
+
+  .col-sm-6 {
+    @media(min-width: $screen-sm-min){
+      & > :first-child {
+        margin-top: 0;
+      }
+
+      & > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media(min-width: $screen-md-min){
+      padding-left: 3em;
+      padding-right: 3em;
+    }
   }
 }
 
 .newsletter-signup {
-  padding-top: 2em;
-  padding-bottom: 2em;
-
-  @media (min-height: 700px) {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
+  padding-top: 3em;
+  padding-bottom: 3em;
+  border: 1px solid $color-codeclub-lightgreen;
+  border-width: 1px 0;
 
   .container {
     max-width: 40em;
@@ -115,8 +139,8 @@
 }
 
 .footer-links {
-  padding-top: 1em;
-  padding-bottom: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
   color: #999;
 
