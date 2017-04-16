@@ -2,7 +2,8 @@
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
-  background: $color-codeclub-green;
+  background: $color-codeclub-green url(/assets/img/hero.jpg) 50% 40% no-repeat;
+  background-size: cover;
   color: #fff;
 
   p {
@@ -12,7 +13,7 @@
   }
 
   h1 {
-    text-shadow: 0.1em 0.2em 0 darken($color-codeclub-green, 15%);
+    text-shadow: 0.1em 0.2em 0 rgba(#000, 0.2);
     margin-top: 0;
   }
 
@@ -21,12 +22,12 @@
     color: $color-codeclub-green;
     font-weight: bold;
     margin-top: 0.5em;
-    box-shadow: 0.2em 0.2em 0 darken($color-codeclub-green, 10%);
+    box-shadow: 0.2em 0.2em 0 rgba(#000, 0.2);
     border: none;
 
     &:hover, &:focus {
       transform: translate(0, -0.1em);
-      box-shadow: 0.3em 0.4em 0 darken($color-codeclub-green, 5%);
+      box-shadow: 0.3em 0.4em 0 rgba(#000, 0.1);
     }
   }
 
@@ -61,25 +62,51 @@
   padding-bottom: 3em;
 
   h2 {
-    text-align: center;
     color: $color-codeclub-green;
-    margin-top: 2em;
   }
 
-  .col-sm-6 {
-    @media(min-width: $screen-sm-min){
-      & > :first-child {
-        margin-top: 0;
-      }
+  .embed-responsive {
+      margin-top: 2em;
+      margin-bottom: 2em;
+  }
+}
 
-      & > :last-child {
-        margin-bottom: 0;
-      }
+.home-microbit {
+  padding: 2em 0;
+  background-size: 100%;
+  background-position: center -10%;
+  background-image: url(/assets/img/microbit-triangle-texture.png), linear-gradient(to left bottom, #42C0C7 30%, #00ED00 100%);
+  background-image: url(/assets/img/microbit-triangle-texture.png), -o-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
+  background-image: url(/assets/img/microbit-triangle-texture.png), -moz-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
+  background-image: url(/assets/img/microbit-triangle-texture.png), -webkit-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
+  background-image: url(/assets/img/microbit-triangle-texture.png), -ms-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42c0c7', endColorstr='#00ed00',GradientType=1 );
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    padding: 0.5em 1em;
+    background: #fff;
+    color: $color-codeclub-green;
+    font-weight: bold;
+    margin-top: 0.5em;
+    box-shadow: 0.2em 0.2em 0 rgba(#000, 0.2);
+    border: none;
+
+    &:hover, &:focus {
+      transform: translate(0, -0.1em);
+      box-shadow: 0.3em 0.4em 0 rgba(#000, 0.1);
     }
+  }
 
-    @media(min-width: $screen-md-min){
-      padding-left: 3em;
-      padding-right: 3em;
+  @media (min-width: $grid-float-breakpoint) {
+    padding: 3em 0;
+
+    h2 {
+      margin-top: 0;
     }
   }
 }
