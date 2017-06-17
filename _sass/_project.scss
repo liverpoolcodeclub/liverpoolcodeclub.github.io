@@ -1,0 +1,130 @@
+.project-header {
+  padding: 3em 0;
+  background: $color-codeclub-green url(/assets/img/hero.jpg) 50% 40% no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  .logo {
+    font-family: $headings-font-family;
+    color: inherit;
+    font-size: 1.2em;
+    text-shadow: 0.1em 0.2em 0 rgba(#000, 0.2);
+  }
+
+  h1 {
+    text-shadow: 0.1em 0.2em 0 rgba(#000, 0.2);
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    h1 {
+      font-size: 3em;
+    }
+
+    .logo {
+      font-size: 1.3em;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    h1 {
+      font-size: 4em;
+    }
+
+    .logo {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.project-steps {
+  background-color: #fff;
+  padding: 3em 0;
+
+  hr {
+    border-color: #ccc;
+    margin: 3em 4em;
+  }
+}
+
+.project-steps__step {
+  padding: 1em 4em;
+  position: relative;
+
+  p, li {
+    line-height: 1.8em;
+  }
+
+  td, th {
+    vertical-align: middle !important;
+  }
+
+  table {
+    margin: 2em 0;
+  }
+
+  img {
+    display: block;
+    margin: 1.5em 0;
+    border-radius: 0.25em;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-steps__step--completed {
+  p, li, th, td {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+  img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+}
+
+.project-steps__step__checkbox {
+  display: block;
+  height: 1.3em;
+  width: 1.3em;
+  position: absolute;
+  left: 1em;
+  top: 1.2em;
+  background: white;
+  border: 2px solid #339933;
+  border-radius: 0.25em;
+  cursor: pointer;
+
+  .project-steps__step--completed & {
+    background: url('../img/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.project-info {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 3em 0;
+}
+
+.project-info__rights {
+  a {
+    color: inherit;
+
+    &[href*="creativecommons.org/licenses/by-sa"]:before {
+      content: "";
+      display: inline-block;
+      width: 96px;
+      height: 24px;
+      margin-right: 0.8em;
+      vertical-align: -0.4em;
+      background: transparent url(../img/cc-by-sa.svg);
+      background-size: 100%;
+    }
+  }
+}

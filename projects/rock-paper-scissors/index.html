@@ -1,0 +1,198 @@
+---
+layout: project
+title: "Rock, Paper, Scissors"
+---
+<div class="project-steps__step">
+    <p>Start a new, empty project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a></p>
+</div>
+<div class="project-steps__step">
+    <p>Drag <code>radio set group</code> and <code>radio send string</code> into <code>on start</code> – change the group number to your pair number, and set the string to your name.</p>
+    <img src="001.png" width="394" height="164" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>on radio received receivedString</code> block, and drag a <code>show string</code> block into it. Rather than showing a fixed string, we’re going to show the text that your microbit has received. Find the <code>receivedString</code> variable in the Variables drawer, and drag it into <code>show string</code> block.</p>
+    <img src="002.png" width="424" height="130" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and get your partner to do the same. One of you try restarting your microbit with the button on the back. What happens? Now let your partner try!</p>
+    <img src="003.png" width="532" height="270" alt="">
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>It’s great that you can send your name to your partner, but it would be even more fun if you could surprise them with a different word each time.</p>
+    <p>Let’s change your code, so that you can send one of three words—rock, paper, or scissors— by pressing either the “A” button, “B” button, or both “A+B” buttons at the same time.</p>
+    <p>Remove the <code>radio send string</code> block from your <code>on start</code> block. We don’t need it any more.</p>
+    <img src="004.png" width="299" height="127" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Create a new variable called <code>me</code>. We will use this to store our choice of word.</p>
+    <img src="005.png" width="602" height="331" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Create a new <code>On button pressed</code> block, with a <code>set to</code> block inside. Pick <code>me</code> as the variable to set, and drag in the empty string block, from inside the “Advanced > Text” drawer. Type “rock” between the quote marks.</p>
+    <img src="006.png" width="291" height="118" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Finish your <code>button pressed</code> block by dragging in a <code>radio send string</code> block. Drag your <code>me</code> variable, from the Variables drawer, into the end of the <code>radio send string</code> block.</p>
+    <img src="007.png" width="326" height="155" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now duplicate your entire <code>button pressed</code> block twice, changing the buttons and the strings, like this:</p>
+    <img src="008.png" width="327" height="400" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and get your partner to do the same. The first time each of you restarts your microbit, it will send your name to your partner, like before. But what happens when you press the “A” button, the “B” button, or both “A+B” at the same time?</p>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>That’s all fine, but to play Rock Paper Scissors, both players need to make their choice at the same time.</p>
+    <p>First, let’s show a countdown when the microbit is turned on. Use <code>show number</code> blocks and <code>pause (ms)</code> blocks, to display the numbers “3”, “2”, and “1”, with a 1 second (1000ms) pause between them.</p>
+    <img src="009.png" width="297" height="349" alt="">
+</div>
+<div class="project-steps__step">
+    <p>At the end of our countdown, rather than showing the number “0”, we’ll show a picture that lets players know they can now make their choice. Use the <code>show icon</code> block from the “Basic” drawer, and pick the empty square icon.</p>
+    <img src="010.png" width="335" height="195" alt="">
+</div>
+<div class="project-steps__step">
+    <p>We want to display that icon for 1 second (1000ms) and then clear the screen. You can find the <code>clear screen</code> block inside the “Basic > More” drawer.</p>
+    <img src="011.png" width="299" height="247" alt="">
+</div>
+<div class="project-steps__step">
+    <p>At the moment, players can make their choice at any time during this countdown. We want to change it, so that choices can only be made when the square icon is displayed.</p>
+    <p>Create a variable called <code>votingOpen</code>. Set <code>votingOpen</code> to “1” before the square icon is displayed, and then set it to “0” after the screen has been cleared.</p>
+    <img src="012.png" width="301" height="270" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Finally, drag a <code>radio send string</code> block from one of your <code>button pressed</code> blocks, and put it at the end of the <code>on start</code> block instead, after <code>set votingOpen to 0</code>. Remove the <code>radio send string</code> blocks from your other two <code>button pressed</code> blocks.</p>
+    <img src="013.png" width="342" height="205" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now add an <code>if</code> block inside each of your button press blocks. Drag the <code>votingOpen</code> variable into the <code>if</code> condition, and then drag your <code>set me to …</code> block into the <code>then</code> segment.</p>
+    <p>Now your code should look like this:</p>
+    <img src="014.png" width="621" height="468" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and get your partner to do the same. Notice how pressing the “A” or “B” buttons does nothing, until the square icon is shown and voting is opened. Then, a second later, voting closes, and your choice is sent to your partner’s microbit.</p>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>So, when you restart your microbit, a countdown displays. But there’s no countdown on your partner’s microbit, so they can’t play. Let’s fix that!</p>
+    <p>Add a <code>radio send string</code> block just after the <code>radio set group</code>, in your <code>on start</code> block. And type in the word “start”.</p>
+    <img src="015.png" width="395" height="190" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now, drag an <code>if then else</code> block into your <code>on radio received</code> block. Put the <code>show string</code> block into the <code>else</code> segment.</p>
+    <img src="016.png" width="453" height="203" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>0 = 0</code> block from the “Logic” drawer and drag it into your <code>if</code> condition. Then drag the <code>receivedString</code> variable into the first part of the <code>0 = 0</code> block, and drag an empty string block from the “Advanced > Text” drawer into the second part. Type “start” into the empty text block, like this:</p>
+    <img src="017.png" width="511" height="214" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now, finally, go back to your <code>on start</code> block, duplicate all the blocks from <code>show number 3</code> down to the end, and drag them over into the <code>then</code> part of your <code>if then else</code> block. Your code should look like this:</p>
+    <img src="018.png" width="513" height="622" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and get your partner to do the same. While you are both downloding the code onto your microbits, they might start counting down. Just wait a few seconds for both microbits to go quiet, before testing them out.</p>
+    <p>To test them out, one of you should start a game by pressing the power button on the back on your microbit. Notice how both microbits show the same countdown at the same time. What happens when you both press “A”, “B”, or “A+B” together when the square icon is shown?</p>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>You will have noticed that, when you choose “rock”, “paper”, or “scissors”, all that happens is your choice gets displayed on your partner’s screen.</p>
+    <p>Let’s program each microbit to compare your vote and your partner’s vote, to show who has won.</p>
+    <p>First we need to add some <code>else if</code> segments to the <code>if then else</code> block inside your <code>on radio received</code> block. You can add more <code>else if</code> segments by clicking the little blue gear icon, and dragging <code>else if</code> blocks into the stack. Add 3 <code>else if</code> blocks, and remove the <code>else</code> block:</p>
+    <img src="019.png" width="368" height="244" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Click on the little blue gear icon again to close the balloon.</p>
+</div>
+<div class="project-steps__step">
+    <p>Drag a <code>0 = 0</code> block from the “Logic” drawer into the first empty <code>else if</code> condition. Drag the <code>receivedString</code> variable into the first part of the <code>0 = 0</code> condition, and drag an empty string block (from the “Advanced > Text” drawer) into the second part. Type “rock” into the empty string block, like this:</p>
+    <img src="020.png" width="511" height="270" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now do the same for <code>receivedString = paper</code> and <code>receivedString = scissors</code> in the other two <code>else if</code> conditions:</p>
+    <img src="021.png" width="542" height="288" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Go to your first <code>receivedString = rock</code> condition, and add another <cpde>if then</cpde> block inside it, with 2 <code>else if</code> conditions. Use the <code>0 = 0</code> block, empty string block, and the <code>me</code> variable, to set up 3 conditions like this:</p>
+    <img src="022.png" width="546" height="463" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now draw faces inside each of the three “then” segments:</p>
+    <ul>
+        <li>“rock” vs “rock” is a draw, so display a straight face</li>
+        <li>“rock” vs “paper” is a win, so display a happy face</li>
+        <li>“rock” vs “scissors” is a loss, so display a sad face</li>
+    </ul>
+</div>
+<div class="project-steps__step">
+    <p>Now do the same again for each of the remaining two <code>receivedString</code> conditions. This table might help you work out who wins and who loses in each case:</p>
+    <table class="table table-bordered" style="table-layout: fixed; width: 30em">
+        <thead>
+            <tr>
+                <th>receivedString</th>
+                <th>me</th>
+                <th>(result)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">rock</td>
+                <td>rock</td>
+                <td>It’s a draw</td>
+            </tr>
+            <tr>
+                <td>paper</td>
+                <td>I win</td>
+            </tr>
+            <tr>
+                <td>scissors</td>
+                <td>I lose</td>
+            </tr>
+            <tr>
+                <td rowspan="3">paper</td>
+                <td>rock</td>
+                <td>I lose</td>
+            </tr>
+            <tr>
+                <td>paper</td>
+                <td>It’s a draw</td>
+            </tr>
+            <tr>
+                <td>scissors</td>
+                <td>I win</td>
+            </tr>
+            <tr>
+                <td rowspan="3">scissors</td>
+                <td>rock</td>
+                <td>I win</td>
+            </tr>
+            <tr>
+                <td>paper</td>
+                <td>I lose</td>
+            </tr>
+            <tr>
+                <td>scissors</td>
+                <td>It’s a draw</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Your finished code should look like this:</p>
+    <img src="023.png" width="545" height="1549" alt="">
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Finally, before we test the finished game out, we need to handle two edge-cases that might sometimes happen.</p>
+    <p>The first is that a player might forget to press a button during the voting period. This will cause problems later on, so instead, we set <code>me</code> to a default choice of “rock” before the countdown starts.</p>
+    <p>Add a “set me to” block before <code>radio send string start</code>, and set the string to “rock”:</p>
+    <img src="024.png" width="395" height="204" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Second, there’s a chance that two microbits restarted at exactly the same time can end up broadcasting over each other, causing confusion at voting time. To avoid this, we can add a tiny delay on the microbit receiving the <code>start</code> command.</p>
+    <p>Add a <code>pause (ms)</code> block before the <code>radio send string me</code> in the <code>on radio received</code> block, and set the pause duration to “50” ms:</p>
+    <img src="025.png" width="509" height="253" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and get your partner to do the same. Remember to wait until both microbits have restarted and gone quiet, and then one of you can start a game by restarting one of your microbits. See who can win the most games in a row!</p>
+</div>
