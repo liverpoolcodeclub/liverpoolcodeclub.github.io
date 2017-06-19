@@ -1,0 +1,117 @@
+---
+layout: project
+title: "Robot board"
+---
+
+<div class="project-info">
+    <h3>Introduction</h3><p>This code is for the robot board for the <a href="../">Remote robot project.</a> You will also need a Microbit with the <a href="../remote-controller">Remote controller code</a> and a two wheeled robot.</p>
+    <p>We will use the <code>radio</code> to receive instructions from the remote controller and install a package from Kitronik with new <code>motor</code> blocks to control the motors.</p>
+    <p>A completed version of the code can be found <a href="https://makecode.microbit.org/_Mi869DcUEhwP">here</a></p>
+</div>
+<div class="project-steps">
+    <h3>Listen to the radio</h3>
+    <p>First we will set up the Microbit to listen for instructions from the remote controller and store them in two variables <code>xValue</code> and <code>yValue</code>
+</div>
+<div class="project-steps__step">
+    <p>Start a new, empty project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a> and rename your project "Robot board"</p>
+</div>
+<div class="project-steps__step">
+    <p>In the <code>Start</code> loop add a <code>Radio set group</code> block. This can be set to any number but it must be the same on the Robot board.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>icon</code> block. This can be any icon, it's to help you remember which microbit has which code so it should be different to the one you used on the Remote controller board.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add two new variables <code>xValue</code> and <code>yValue</code></p>
+    <p>Set these to 0 in the start loop</p>
+    <img src="007.png" width="247" height="203" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>on radio received 'name' 'value'</code> block.</p>
+    <p>This gives us two new variables <code>name</code>, which stores the x or y value we set on the remote controller and <code>value</code> which holds the number we sent from the accelerometer.</p>
+    <img src="008.png" width="348" height="93" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>if elseif</code> block.</p>
+    <img src="009.png" width="347" height="179" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>equals</code> block from the logic draw.</p>
+    <p>Set one side to <code>xValue</code> and using a <code>text</code> block set the other side to x</p>
+    <img src="010.png" width="343" height="176" alt="">
+</div>
+<div class="project-steps__step">
+    <p>If <code>name</code> is set to x we want to store <code>value</code> in our variable <code>xValue</code></p>
+    <img src="011.png" width="351" height="195" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Next we need to check if <code>name</code> is set to y, repeat the two steps above replacing "x" and <code>xValue</code> with "y" and <code>yValue</code></p>
+    <img src="012.png" width="346" height="210" alt="">
+</div>
+<div class="project-steps">
+    <h3>Processing the data</h3>
+    <p>Our board can now receive the x and y values from the remote controller and store them in <code>xValue</code> and <code>yValue</code>.</p>
+    <p>Now we just need to take these numbers and use them to turn the motors on and off</p>
+    <p>To make the robot move we are going to use the <code>yValue</code>, tilting the board forward and backwards, to move the robot forwards and backwards. To make this happen we need to turn both wheels at the same speed in the same direction. If <code>yValue</code> is a positive number we'll go forward, if it's negative we'll go backwards.</p>
+    <p>For turning we'll use the <code>xValue</code> number as the speed, but turn the wheels in opposite directions. This will make the robot spin. A positive x value will mean the wheel turns forwards, and a negative value backwards. So for the left wheel we will use + xValue, for the right wheel we will use - xValue.</p>
+    <p>Putting this together we can add the <code>xValue</code> and <code>yValue</code> together to make a new variable for each wheel called <code>leftWheel</code> and <code>rightWheel</code></p>
+    <p><code>leftWheel</code> = <code>yValue</code> + <code>xValue</code></p>
+    <p><code>rightWheel</code> = <code>yValue</code> - <code>xValue</code></p>
+</div>
+<div class="project-steps__step">
+    <p>Make two new variables <code>leftWheel</code> and <code>rightWheel</code></p>
+</div>
+<div class="project-steps__step">
+    <p>In the <code>forever</code> loop set <code>leftWheel</code> and <code>rightWheel</code> using maths blocks and copies of the variables <code>xValue</code> and <code>yValue</code></p>
+    <img src="013.png" width="446" height="138" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add two <code>if then else</code> blocks, we will use these to test if our <code>leftWheel</code> and <code>rightWheel</code> variables are positive or negative. If they are positive the motor will turn forwards, if they are negative backwards.</p>
+</div>
+<div class="project-steps__step">
+    <p>Use <code>0 &#62; 0</code> blocks from the Logic drawer to check if <code>xValue</code> and <code>yValue</code> are greater than 0</p>
+    <img src="014.png" width="462" height="337" alt="">
+</div>
+<div class="project-steps">
+    <h3>Add the Motor package</h3>
+    <p>All that is left is to actually turn the motors on and off. We will use a special block for this that needs to be added as a package.</p>
+</div>
+<div class="project-steps__step">
+    <p>From the <code>advanced</code> draw click <code>Add package</code></p>
+    <p>In the box that says 'Search or add project URL' paste the following link</p>
+    <p><a href="https://github.com/KitronikLtd/pxt-kitronik-motor-driver">https://github.com/KitronikLtd/pxt-kitronik-motor-driver</a></p>
+    <p>Press 'Enter' and then click on the box that says 'Kitronik-motor-driver' to add the package</p>
+    <img src="015.png" width="800" height="274" alt="">
+</div>
+<div class="project-steps">
+    <p>You have added a new drawer to your editor, called 'Kitronik'. Click on 'Motor driver' and you will find two new blocks to turn motors on and off.</p>
+    <img src="016.png" width="597" height="153" alt="">
+</div>
+<div class="project-steps">
+    <h3>Code the motors</h3>
+    <p>Now we can finish our <code>forever</code> loop, adding <code>motor</code> blocks for each wheel.</p>
+</div>
+<div class="project-steps__step">
+    <p>Get a <code>motor</code> block from the Kitronik MotorDriver draw and plug it into the <code>then</code> on the first <code>if then else</code> block.</p>
+    <p>Set motor to 1, direction to forward and speed to <code>leftWheel</code></p>
+    <img src="017.png" width="592" height="231" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Duplicate this block and plug the copy into the <code>else</code> part of the <code>if then else</code> block.</p>
+    <p>Change the direction to reverse</p>    
+</div>
+<div class="project-steps__step">
+    <p>The speed value for the <code>motor</code> block needs to be a positive number. This block will only run if <code>xValue</code> is negative.</p>
+    <p>To fix this we use an <code>absolute of</code> block from the maths more drawer. This turns our negative number into a positive one.</p>    
+    <p>Add an <code>absolute of</code> block to the speed of the <code>motor</code> block</p>
+    <img src="018.png" width="682" height="150" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Duplicate both these <code>motor</code> blocks and plug them into the <code>if then else</code>block for the right wheel.</p>
+    <p>Change the motor to 2 and replace <code>leftWheel</code> with <code>rightWheel</code></p>
+    <img src="019.png" width="594" height="363" alt="">   
+</div>
+<div class="project-steps">
+    <h3>Control your robot!</h3>
+    <p>The robot board is finished! Download this code onto a Microbit and plug it into your robot. Use your <a href="../remote-controller">Remote controller board</a> to move your robot by tilting it forwards, backwards, left and right.</p>
+</div>
