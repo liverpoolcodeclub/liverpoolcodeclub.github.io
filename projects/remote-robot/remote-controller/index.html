@@ -1,0 +1,78 @@
+---
+layout: project
+title: "Remote controller"
+---
+
+<div class="project-info">
+    <h2>Introduction</h2><p>This code is for the remote controller for the <a href="../">Remote robot project.</a> You will also need a Microbit with the <a href="../robot-board">Robot board code</a> and a two wheeled robot.</p>
+    <p>We will collect information about how this microbit is tilted from the <code>accelerometer</code> and send this to the Robot board using the <code>radio</code>
+    <p>A completed version of this code can be found <a href="https://makecode.microbit.org/_fPCPx2cuHH3j">here</a></p>
+</div>
+<div class="project-steps">
+    <p>The accelerometer tells us if the microbit is tilted and how much. Move your mouse over the left and right of the microbit and see how the numbers change.</p>
+   <div style="position:relative;width:400px;height:0;padding-bottom:40%;overflow:hidden;">
+     <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://makecode.microbit.org/---run?id=_KKbDYcaMgbq2" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-forms allow-scripts allow-same-origin" frameborder="0"></iframe></div>
+    <h3>Testing the accelerometer</h3>
+    <p>Later we will use these numbers to control how the robot moves. First let's see what they look like.</p>
+</div>
+<div class="project-steps__step">
+    <p>Start a new, empty project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a> and rename your project "Remote controller"</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>show number</code> block to your forever loop</p>
+</div>
+<div class="project-steps__step">
+    <p>Plugin in an <code>acceleration (x)</code> block into <code>show number</code></p>
+    <img src="001.png" width="400" height="120" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download this code to your Microbit.</p>
+    <p>Notice how tilting the board left and right shows different numbers.</p>
+    <p>Change the <code>acceleration</code> block to show Y instead of X</p>
+    <p>How does this change how the numbers change?</p>
+</div>
+<div class="project-steps">
+    <p>With the <code>accelerometer</code> block X shows how much the microbit is tilted left and right,</p>
+    <p>Y shows how much the Microbit is tilted forward and backwards.</p>
+    <p>We will use Y to move the robot backwards and forwards, and X to steer the robot left and right.</p> 
+</div>
+<div class="project-steps">
+    <h3>The remote controller code</h3>
+    <p>So now we can write the code to send these values to our robot with <code>radio</code> blocks. Before we send the X and Y numbers we do some maths, dividng them by 10 and 20. These numbers control how much the robot responds to the remote controller tilting. When you have set up your robot you can try changing these numbers to see how they change how the robot responds.</p>
+</div>
+<div class="project-steps__step">
+    <p>In the <code>Start</code> loop add a <code>Radio set group</code> block. This can be set to any number but it must be the same on the Robot board.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>icon</code> block. This can be any icon, it's to help you remember which microbit has which code.</p>
+    <img src="002.png" width="400" height="225" alt="">
+</div>
+<div class="project-steps__step">
+    <p>In the <code>forever</code> loop add a <code>Radio send value "name"</code> block, change "name" to "x".</p>
+    <img src="003.png" width="396" height="120" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Plug in a purple <code>divide (&#247;)</code> block.</p>
+</div>
+<div class="project-steps__step">
+    <p>Move the <code>acceleration (mg) x</code> block and plug it into the left side of the <code>divide (&#247;)</code> block.</p>
+</div>
+<div class="project-steps__step">
+    <p>Type 20 into the right hand side of the <code>divide (&#247;)</code> block.</p>
+    <img src="004.png" width="698" height="121" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>pause</code> block and set ot to 100ms.</p>
+    <img src="005.png" width="693" height="156" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Duplicate these lines of code, changing both x's to y's, and 20 to 10.</p>
+    <img src="006.png" width="696" height="244" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code to your microbit.</p>
+</div>
+<div class="project-steps">
+    <p>The remote controller is finished, but it doesn't do anything interesting until you have written the code for your <a href="../robot-board">Robot board.</a></p>
+</div>
+
