@@ -47,31 +47,43 @@
   }
 }
 
+.project-steps__info,
 .project-steps__step {
-  padding: 1em 4em;
+    padding: 1em 4em;
+
+    p, li {
+      line-height: 1.8em;
+    }
+
+    td, th {
+      vertical-align: middle !important;
+    }
+
+    table {
+      margin: 2em 0;
+    }
+
+    img {
+      display: block;
+      margin: 1.5em 0;
+      border-radius: 0.25em;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h2 {
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+}
+
+.project-steps__step {
   position: relative;
-
-  p, li {
-    line-height: 1.8em;
-  }
-
-  td, th {
-    vertical-align: middle !important;
-  }
-
-  table {
-    margin: 2em 0;
-  }
-
-  img {
-    display: block;
-    margin: 1.5em 0;
-    border-radius: 0.25em;
-  }
-
-  & > :last-child {
-    margin-bottom: 0;
-  }
 }
 
 .project-steps__step--completed {
@@ -127,4 +139,8 @@
       background-size: 100%;
     }
   }
+}
+
+.project-materials {
+    margin: 0;
 }
