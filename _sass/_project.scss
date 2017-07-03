@@ -144,3 +144,37 @@
 .project-materials {
     margin: 0;
 }
+
+.all-projects {
+    background-color: $color-codeclub-palegreen;
+    padding: 3em 0;
+}
+
+.project-tile {
+    display: block;
+    background-color: #fff;
+    border-radius: $border-radius-base;
+    box-shadow: 0 1px 1px rgba(#000, 0.2);
+    margin-bottom: 1em;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 1em 1em 0.8em 1em;
+
+        @media (min-width: $screen-md) {
+            font-size: 2em;
+        }
+
+        @media (min-width: $screen-lg) {
+            font-size: 2.2em;
+        }
+    }
+}
