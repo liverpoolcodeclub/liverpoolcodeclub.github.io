@@ -11,9 +11,110 @@ title: "Morse Code"
     <p>Setting up a new array is similar to setting up a normal variable. We make a new variable and give it a name in the Variables draw.</p>
     <p>Instead of setting it to one value as we would with a normal variable we use a <code>create array with</code> block from the Advanced, Array drawer.</p>
     <p>Now we can set the variable to hold a list of values. These can either be numbers, or text but not a mix of both.</p>
-    <p>To read a value from an array we use 
+</div>
+<div class="project-steps__step">
+    <p>Open a new project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a></p>
+</div>
+<div class="project-steps__step">
+    <p>Make a new variable called <code>myArray</code></p>
+</div>
+<div class="project-steps__step">
+    <p>In the start loop add a <code>set item to</code> block and set it to <code>myArray</code>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>create array with " "</code> block from Advanced, Arrays.</p>
+</div>
+<div class="project-steps__step">
+    <p>Use the blue cog icon and drag three more <code>value</code> blocks to add more places on your array list.</p>
+</div>
+<div class="project-steps__step">
+    <p>Fill in the empty text blocks with a list of objects.</p>
+</div>
+<div class="project-steps">
+    <p>We have created an array called <code>myArray</code> holding a list of words but how do we use this list in code?</p>
+    <p>The list is stored in order, the first item is stored at position 0, the second at 1, the third at 2..
+    <ol start="0">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Elephant</li>
+        <li>Cheese</li>
+    </ol></p>
+    <p>We can see what is at any positon on the list by using a <code>get value at</code> block from Advanced, Arrays.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>on Button A pressed</code> block from Input</p>
+</div>
+<div class="project-steps__step">
+    <p>Put a <code>show string</code> block from Basic inside the <code>on Button A pressed</code> block.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>get value at</code> block from Advanced, Arrays and change the variable to <code>myArray</code></p>
+</div>
+<div class="project-steps">
+    <p>Try this code in the simulator, what happens when you press button A?</p>
+    <p>Change the number in your <code>get value at</code> block to see other items on the list.</p>
+</div>
+<div class="project-steps">
+    <h3>Advanced telegraph machine</h3>
+    <p>Now we know about arrays we can use them to code our advanced telegraph machine.</p>
+    <p>We will create arrays to hold all the letters of the alphabet <code>alphabet</code> and all the Morse code values <code>morse</code>.</p>
+    <p>By storing the letter in <code>alphabet</code> at the same number in the list as it's morse code value in <code>morse</code> we can quickly convert between the two.</p>
 </div>
 <div class="project-steps__step">
     <p>Open the project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a></p>
-    <p>This has all the code from the <a href="./">basic Morse code project</a> and two <code>array</code> lists for the morse codes and all the letters of the alphabet. They have already been filled in for you.</p>
+    <p>This has all the code from the <a href="./">basic Morse code project</a> and two <code>array</code> lists for the morse codes <code>morse</code> and all the letters of the alphabet <code>alphabet</code>. They have already been filled in for you.</p>
 </div>
+<div class="project-steps">
+    <h3>Check letters to be sent</h3>
+    <p>First we will add a check before we send a letter to make sure it is in the <code>morse</code> array.</p>
+    <p>If it is we will show the letter from <code>alphabet</code> on the display and send the <code>morse</code> value by <code>radio</code></p>
+    <p>If <code>LetterToSend</code> isn't in our <code>morse</code> list we will show the message "error" on the screen and reset <code>LetterToSend</code></p>
+</div>
+<div class="project-steps__step">
+    <p>Make a new variable called<code>arrayPosition</code> we will use this when we search <code>morse</code> for our letter.</p> 
+</div>
+<div class="project-steps__step">
+    <p>In the <code>on button A+B pressed</code> add a <code>set item to</code> block and set it to <code>arrayPosition</code></p> 
+</div>
+<div class="project-steps__step">
+    <p>From Advanced, Arrays, more get a <code>list find index of</code> block. Change <code>list</code> to <code>morse</code> and plug in a copy of <code>LetterToSend</code> from Variables.</p>
+    <p>This block searches the <code>morse</code> array for the text held in <code>LetterToSend</code>. If it finds the text in the array it will set <code>arrayPosition</code> to the place in the array list the text is stored at.</p> 
+</div>
+<div class="project-steps__step">
+    <p>Next add an <code>if then else</code> block from Logic to check if the <code>list find index of</code> block found our coded letter in the <code>morse</code> array.</p> 
+</div>
+<div class="project-steps__step">
+    <p>Get a <code>get value at</code> block from Advanced, Arrays and set it to search <code>alphabet</code> for the value at the position held in <code>arrayPosition</code>. Plug this into the <code>if</code> block</p>
+    <p>If the letter we are trying to send is in the array the <code>get value at</code> block will be true and <code>then</code> will be used, if it isn't it will be false and the <code>else</code> will be run instead.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add two <code>show string</code> blocks from Basic to <code>then</code> and <code>else</code>.</p>
+    <p>In the <code>then</code> duplicate the code from <code>if</code></p>
+    <p>For the <code>else</code> type "Error"</p> 
+</div>
+<div class="project-steps__step">
+    <p>Move the <code>radio send string</code> block into the <code>then</code> block.</p> 
+</div>
+<div class="project-steps__step">
+    <p>Finally use a <code>set item to</code> block from variables and a blank text block from Text to reset <code>LetterToSend</code> ready for the next letter.</p> 
+</div>
+<div class="project-steps">
+    <p>Download your code to your Microbit and test it. You can still input letters to send using A and B. Now when you send them with A+B it will check if you have entered a letter and show it on the display, or show error if you have made a mistake.</p>
+</div>
+<div class="project-steps">
+    <h3>Translate recieved letters</h3>
+    <p>Using the same technique we can convert any letters we receive from <code>morse</code> to <code>alphabet</code>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Copy all the code from <code>on button A+B pressed</code> and add it to the <code>on radio received string</code> block.</p>
+    <p>Delete the <code>radio send string</code> block</p>
+    <p>Change <code>LetterToSend</code> to <code>recievedString</code></p>
+</div>
+<div class="project-steps">
+    <p>Now when the Microbit receives a letter it will check if it can find the code in the <code>morse</code> array and show the letter at the same place in the <code>alphabet</code> array.</p>
+    <p>We still reset the <code>LetterToSend</code> variable, in case you were in the middle of sending a letter when you recieved one</p>
+</div>
+
+
+
