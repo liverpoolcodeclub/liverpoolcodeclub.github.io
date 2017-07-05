@@ -4,10 +4,12 @@ title: "Morse Code"
 ---
 <div class="project-info">
     <h2>Introduction</h2>
-    <p>In the nineteenth and early twentieth centuries, before telephones and the internet, the quickest way to send messages was by telegraph. This was a network of wires suspended on telegraph poles on land and thick rubber cables under the sea. Messages could be sent as electrical pulses at very high speed.</p>
-    <p>Samuel Morse invented a code that represents letters as sets of short and long electrical pulses, known as 'dots' (.) and 'dashes'(-). In Morse code A is .- B is -... between each letter is a short pause and a longer pause between each word. Telegraph operators could send and recieve messages very quickly by listening to these electical pulses as beeps and tapping their reply with a button.</p>
+    <p>In the nineteenth and early twentieth centuries, before telephones and the internet, the quickest way to send messages was by telegraph. This was a network of wires suspended on telegraph poles (on land) and in thick rubber cables (under the sea). Messages could be sent as electrical pulses at very high speed.</p>
+    <p>Samuel Morse invented a code that represents letters as sets of short and long electrical pulses, known as 'dots' (.) and 'dashes' (-). </p>
+    <img src="morsecode.png" width="500" height="515" alt="">
+    <p>There is a short pause between letters and a longer pause between each word. Telegraph operators could send and receive messages very quickly by listening to these electical pulses as beeps and tapping their reply with a button.</p>
     <p>We are going to program our Microbit to work like a telegram using Morse code. Then we can be telegraph operators and swap messages with other Microbits.</p> 
-    <p>In our code we will use <code>text</code> to store dots and dashes` and the <code>radio</code> to send the code to another Microbit</p> 
+    <p>In our code we will use <code>text</code> to store dots and dashes, and the <code>radio</code> to send the code to another Microbit.</p> 
 </div>
 <div class="project-steps">
     <h3>Dots and Dashes</h3>
@@ -20,34 +22,32 @@ title: "Morse Code"
     <p>Make a new variable called <code>LetterToSend</code></p>
 </div>
 <div class="project-steps__step">
-    <p>In the <code>Start loop</code> add a <code>set</code> block from the Variables draw and change it to <code>LetterToSend</code>.</p>
+    <p>In the <code>Start loop</code> add a <code>set</code> block from the Variables drawer and change it to <code>LetterToSend</code>.</p>
     <p>Add and empty text block from the Advanced, Text drawer.</p>
+    <img src="image1.png" width="375" height="108" alt="">
 </div>
 <div class="project-steps">
-    <p>Now we have a variable to store our Morse code and we have set it to be empty we can use it to store button presses by the telegraph operator. Each time a button is pressed we will use the Text block <code>join</code> to add the code to our <code>LetterToSend</code> variable.</p>
+    <p>Now we have a variable to store our Morse code and we have set it to be empty, we can use it to store button presses by the telegraph operator. Each time a button is pressed we will use the Text block <code>join</code> to add the code to our <code>LetterToSend</code> variable.</p>
 </div>
 <div class="project-steps__step">
     <p>Add an <code>on button A pressed</code> block from Input.</p>
-</div>
-<div class="project-steps__step">
     <p>Add a <code>set</code> block from Variables and change it to <code>LetterToSend</code>.</p>
+    <img src="image2.png" width="328" height="105" alt="">
 </div>
 <div class="project-steps__step">
     <p>Add a <code>join</code> block from Text</p>
-</div>
-<div class="project-steps__step">
-    <p>In the top of the <code>join</code> block and a copy of <code>LetterToSend</code> from Variables.</p>
-</div>
-<div class="project-steps__step">
-    <p>Add an empty text block from the Text drawer to the bottom of the <code>join</code> block.</p>
-    <p>Set it to .</p>
+    <p>In the top of the <code>join</code> block add a copy of <code>LetterToSend</code> from Variables.</p>
+    <p>Set the empty text block at the bottom of the <code>join</code> block to be a dot (.).</p>
+    <img src="image3.png" width="500" height="132" alt="">
 </div>
 <div class="project-steps__step">
     <p>Add a <code>show string</code> block from Basic</p>
     <p>Set it to <code>LetterToSend</code> to show all the dots and dashes we have entered so far.</p>
+    <img src="image4.png" width="500" height="169" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Duplicate this code, changing the button press to B and the . to -</p>
+    <p>Duplicate this code, changing the button press to B and the dot (.) to a dash (-).</p>
+    <img src="image5.png" width="500" height="163" alt="">
 </div>
 <div class="project-steps">
     <h3>Sending a letter</h3>
@@ -56,39 +56,43 @@ title: "Morse Code"
 <div class="project-steps__step">
     <p>Add a <code>radio set group</code> block from Radio to the <code>on start</code> block.</p>
     <p>Set this to your group number</p>
+    <img src="image6.png" width="351" height="140" alt="">
 </div>
 <div class="project-steps__step">
     <p>Add an <code>on button A+B pressed</code> block from Input.</p>
-</div>
-<div class="project-steps__step">
     <p>Add a <code>radio send string</code> block from Radio, set it to <code>LetterToSend</code></p>
+    <img src="image7.png" width="385" height="107" alt="">
 </div>
 <div class="project-steps__step">
     <p>Reset the <code>LetterToSend</code> variable with an empty text block ready for the next letter.</p>
+    <img src="image8.png" width="387" height="129" alt="">
 </div>
 <div class="project-steps">
     <h3>Receiving a letter</h3>
     <p>When we receive a letter we will show the Morse code on the screen.</p>
 </div>
 <div class="project-steps__step">
-    <p>Add an <code>on radio recieved recievedString</code> block from Radio.</p>
-</div>
-<div class="project-steps__step">
-    <p>Set a <code>show string</code> block from Basic to show <code>recievedString</code>.</p>
+    <p>Add an <code>on radio received receivedString</code> block from Radio.</p>
+    <p>Set a <code>show string</code> block from Basic to show <code>receivedString</code>.</p>
+    <img src="image9.png" width="379" height="105" alt="">
 </div>
 <div class="project-steps">
-    <p>We might be in the middle of trying to send a letter ourselves when we recieve one. This can get confusing, so if we recieve a letter while we are trying to send one we'll delete the code we have entered so far in <code>LetterToSend</code>.</p>
+    <p>We might be in the middle of trying to send a letter ourselves when we receive one. This can get confusing, so if we receive a letter while we are trying to send one we'll delete the code we have entered so far in <code>LetterToSend</code>.</p>
 </div>
 <div class="project-steps__step">
     <p>Set <code>LetterToSend</code> to an empty text block from Advanced, Text.</p>
+    <img src="image10.png" width="374" height="134" alt="">
 </div>
 <div class="project-steps">
     <h3>Sending telegraph messages</h3>
-    <p>We now have a working telegraph system that can send and recieve Morse code. Try sending a message to your partner and get them to send one back.</p>
+    <p>We now have a working telegraph system that can send and receive Morse code.</p>
+    <p>Try sending a message to your partner and get them to send one back.</p>
     <p>Can you think of a way to tell each other when it's their turn to send a message?</p>
-    <p>This works as a telegraph, in the <a href="./advanced.html">advanced section</a> of this project we make a version that translates recieved Morse code into letters using an <code>array</code>.</p>
+    <p>This works as a telegraph, in the <a href="./advanced.html">advanced section</a> of this project we make a version that translates received Morse code into letters using an <code>array</code>.</p>
 </div>
-
+<div class="project-steps">
+    <p>A complete version of the code for the basic telegraph can be found <a href="https://makecode.microbit.org/_WJYLF7CJePog">here</a></p>
+</div>
 
 
 
