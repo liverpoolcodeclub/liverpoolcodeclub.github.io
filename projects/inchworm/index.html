@@ -1,0 +1,127 @@
+---
+layout: project
+title: "Racing Inchworms"
+---
+<div class="project-steps__info">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>For this project, you will need:</p>
+            <ul class="project-materials">
+                <li>1 &times; Microbit</li>
+                <li>1 &times; Cardboard strip</li>
+                <li>1 &times; Mini 180-degree servo</li>
+                <li>3 &times; jumper wire</li>
+                <li>3 &times; wire with crocodile clips</li>
+                <li>10cm poseable metal wire</li>
+                <li>Sticky tape</li>
+                <li>Googley eyes, or other decorations</li>
+                <li>Some 2p coins, for weight</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <img src="craft-001.jpg" width="600" height="450" alt="">
+        </div>
+    </div>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Fold the cardboard in half lengthways.</p>
+    <img src="craft-002.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Cut triangles on both of the short edges, to make teeth.</p>
+    <img src="craft-003.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Bend and curl the teeth so they point backwards.</p>
+    <img src="craft-004.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Hold the servo upright and turn the arm as far anticlockwise as it will go.</p>
+    <p>Then, carefully remove the arm, and push it back on at the 9’clock position.</p>
+    <img src="craft-005.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Tape the servo halfway up the back side of the cardboard, with the arm sticking over the side.</p>
+    <img src="craft-006.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Take 10cm of metal wire, and bend a right angle a third of the way along, to make an “L” shape:</p>
+    <img src="craft-007.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Push the longer end of the wire through the hole at the end of the servo arm, and bend the end over to hold it in place.</p>
+    <img src="craft-008.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Use some tape to fix the other end of the metal wire about halfway up the front of your Inch Worm.</p>
+    <img src="craft-009.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Decorate your Inch Worm.</p>
+    <img src="craft-010.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Your servo has three wires coming out of it. Find the sockets at the end of those wires, and stick jumper wires into them. Use some tape to fix them into place.</p>
+    <img src="craft-011.jpg" width="600" height="338" alt="">
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Now your Inch Worm is finished, it’s time to write the code that will make it come to life!</p>
+    <p>Start a new, empty project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a></p>
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>on button A pressed</code> block.</p>
+    <img src="code-001.png" width="284" height="111" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Open the <strong>Advanced > Pins</strong> drawer, and find the <code>servo write pin</code> block inside it.</p>
+    <p>Drag the <code>servo write pin</code> block into your <code>on button A pressed</code> block, and set the servo angle to <code>180</code>.</p>
+    <img src="code-002.png" width="389" height="129" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Finally, add an image to show the worm’s legs are closed.</p>
+    <img src="code-003.png" width="388" height="280" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Duplicate the entire <code>on button A pressed</code> block, but change the button to <code>B</code>, and the angle to <code>0</code> degrees.</p>
+    <p>Change the icon so that it looks like the worm’s legs are open.</p>
+    <img src="code-004.png" width="371" height="279" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>on start</code> block. Add a <code>servo write pin</code> block inside it, and set the servo angle to <code>0</code>.</p>
+    <p>Copy in the icon of the worm’s open legs, from your <code>on button B pressed</code> block.</p>
+    <img src="code-005.png" width="370" height="277" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download code onto your microbit.</p>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Now it’s time to connect your microbit up to your Inchworm.</p>
+    <p>Attach three crocodile clips to the three jumper wires your Inchworm.</p>
+    <img src="craft-012.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Trace the orange wire from the servo. Follow it all the way along to the crocodile clip at the end, and connect that clip to <strong>pin 0</strong> on your microbit.</p>
+    <p>This connection is called the “signal” wire – it lets the <code>servo write pin</code> blocks in your code send the electrical pulse that turns the servo to the required angle.</p>
+</div>
+<div class="project-steps__step">
+    <p>Your servo also needs power to run. Power is carried along the red and brown wires from the servo, which need to be connected to the <strong>3V</strong> and <strong>GND</strong> pins on your microbit.</p>
+    <p>Find the red wire coming from the servo. Follow it all the way along, and connect the crocodile clip at the end to the <strong>3V pin</strong> on your microbit.</p>
+    <p>Then find the brown wire. Follow it all the way along, and connect it to the <strong>GND pin</strong> on your microbit.</p>
+    <p>With that done, your microbit should look like this:</p>
+    <img src="craft-013.jpg" width="600" height="338" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Plug your battery into the microbit, and test your Inchworm by pressing the A or B buttons.</p>
+    <h2>Does your Inchworm have trouble moving forward?</h2>
+    <p>Try adding more weight – stick some coins onto the inside of the front face.</p>
+    <img src="craft-014.jpg" width="600" height="338" alt="">
+    <h2>Does the Inchworm not close tight enough?</h2>
+    <p>Bend the wire outwards a bit, to shorten the Inchworm’s stride.</p>
+</div>
+<div class="project-steps__step">
+    <p>Now you’re happy with your Inchworm, all that’s left to do is… Race!</p>
+</div>
+
