@@ -1,0 +1,87 @@
+---
+layout: project
+title: "Make your micro:bit squeal!"
+---
+<div class="project-steps__info">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>For this project, you will need:</p>
+            <ul class="project-materials">
+                <li>1 &times; micro:bit</li>
+                <li>1 &times; Kitronik inventors kit</li>
+                <li>1 &times; (optional) amplified speaker</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Connect the micro:bit breakout board to a piezo buzzer, as shown in the diagram below.</p>
+    <img src="step-01.png" width="609" height="600" alt="" style="border-radius: 0; margin: 3em auto 0 auto;">
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Make a new variable called <code>hertz</code>.</p>
+    <img src="step-02.png" width="920" height="360" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Inside <code>on start</code>, set <code>hertz</code> to the number <code>520</code>.</p>
+    <img src="step-03.png" width="340" height="142" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>ring tone</code> block, and plug the <code>hertz</code> variable into it.</p>
+    <img src="step-04.png" width="405" height="195" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code to your microbit. When the microbit restarts, it should play a tone forever.</p>
+</div>
+<hr>
+<div class="project-steps__info">
+    <p>Let’s vary the tone when we <strong>tilt</strong> the microbit!</p>
+    <p>We’ll make it so that the lowest sound is a Middle C (260 hertz) and the highest is a High C (1040 hertz).</p>
+</div>
+<div class="project-steps__step">
+    <p>Replace the number <code>520</code> with a <code>map</code> block.</p>
+    <img src="step-05.png" width="453" height="299" alt="">
+    <p>Map converts a number on one scale to a number at the equivalent position on another scale.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>acceleration (mg) x</code> block, and plug it into the first part of the <code>map</code> block.</p>
+    <img src="step-06.png" width="640" height="312" alt="">
+</div>
+<div class="project-steps__step">
+    <p>The <code>acceleration (mg) x</code> block returns a number between <code>-1023</code> (when the microbit is tilted all the way to the left) and <code>+1023</code> (when the microbit is tilted all the way to the right).</p>
+    <p>Type <code>-1023</code> into the <code>from low</code> block, and <code>1023</code> into the <code>from high</code> block.</p>
+    <img src="step-07.png" width="630" height="320" alt="">
+</div>
+<div class="project-steps__step">
+    <p>The lowest sound we want to play is Middle C (260 hertz), so type <code>260</code> in the <code>to low</code> box.</p>
+    <img src="step-08.png" width="631" height="316" alt="">
+    <p>What do you think we should type into the <code>to high</code> box, so that it plays a High C?</p>
+</div>
+<div class="project-steps__step">
+    <p>Download the code, and tilt your microbit. The tone will go up and down as you tilt the microbit to the left and right.</p>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="project-steps__step">
+            <p>Now for a challenge! The microbit can detect all sorts of inputs. Can you make the tone vary based on the <strong>light level</strong> reaching your microbit?</p>
+            <p>Remember, you’ll need to change the <code>-1023</code> and <code>1023</code> numbers, to match the minimum and maximum values returned by the <code>light level</code> block. Try Googling “microbit light level” to read the documentation for the <code>light level</code> block, and see whether you can spot the minimum and maximum values!</p>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <img src="bulb-robot.png" width="146" height="293" alt="" style="margin: 0 auto; display: block; max-height: 260px; width: auto;">
+    </div>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Once you’ve made the sound change based on light level, can you work out how to make it change based on <strong>compass heading</strong>?</p>
+    <p>Just like last time, you can use Google to find out the minimum and maximum values returned by the <code>compass heading</code> block.</p>
+</div>
+<hr>
+<div class="project-steps__step">
+    <p>Once you’ve done that, how might you vary the tone based on <strong>how near one microbit is to another</strong>?</p>
+    <p>The following code blocks might come in useful:</p>
+    <img src="step-09.png" width="739" height="359" alt="">
+</div>
