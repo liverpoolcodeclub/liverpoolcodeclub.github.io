@@ -3,13 +3,28 @@ layout: project
 title: "Remote robot"
 ---
 
-<div class="project-info">
-    <h2>Introduction</h2><p>This project uses two microbits to control a robot remotely using the radio blocks. The remote controller will send our instructions to the robot, the robot board will receive these instructions and control the robot's motors.</p>
+<div class="project-steps__info">
+    <h2>Introduction</h2>
+    <p>This project uses two microbits to control a robot remotely using the radio blocks. The remote controller will send our instructions to the robot, the robot board will receive these instructions and control the robot's motors.</p>
     <p>We will use the <code>radio</code> and <code>accelerometer</code>.</p>
     <p>For this project you will need a two wheeled robot designed for the microbit. Kits are available such as this <a href="https://www.kitronik.co.uk/5604-line-following-buggy-for-the-bbc-microbit.html">line following buggy.</a> Or you can <a href="https://github.com/huffeec/minimum-viable-robot">download plans</a> and make your own simple two wheeled robot, or find a makerspace, like <a href="https://doesliverpool.com">DoES Liverpool</a>, and design your own.</p>
-<p>The instructions for this project are in two parts.</p>
-<ul>
-<li><a href="./remote-controller">Remote controller</a> - Sends information from the<code>accelerometer</code> by <code>radio</code></li>
-<li><a href="./robot-board">Robot board</a> - Receives instructions by <code>radio</code> and drives the robot's motors</li>
-</ul>
+</div>
+<div class="project-steps__info">
+    <h2 style="margin-bottom: 2em">The instructions for this project are in two parts.</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="well">
+                <a href="./remote-controller"><h3 style="margin-top: 0">Remote controller</h3></a>
+                <p>The controller sends information from the <code>accelerometer</code> to the robot, over <code>radio</code>.</p>
+                <p style="margin-bottom: 0"><a href="./remote-controller" class="btn btn-primary">Read instructions</a></p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="well">
+                <a href="./robot-board"><h3 style="margin-top: 0">Robot board</h3></a>
+                <p>The robot board receives instructions by <code>radio</code> and drives the robot’s motors.</p>
+                <p style="margin-bottom: 0"><a href="./robot-board" class="btn btn-primary">Read instructions</a></p>
+            </div>
+        </div>
+    </div>
 </div>

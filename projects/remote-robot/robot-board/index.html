@@ -3,13 +3,15 @@ layout: project
 title: "Robot board"
 ---
 
-<div class="project-info">
-    <h3>Introduction</h3><p>This code is for the robot board for the <a href="../">Remote robot project.</a> You will also need a Microbit with the <a href="../remote-controller">Remote controller code</a> and a two wheeled robot.</p>
+<div class="project-steps__info">
+    <h2>Introduction</h2>
+    <p>This code is for the robot board for the <a href="../">Remote robot project.</a> You will also need a Microbit with the <a href="../remote-controller">Remote controller code</a> and a two wheeled robot.</p>
     <p>We will use the <code>radio</code> to receive instructions from the remote controller and install a package from Kitronik with new <code>motor</code> blocks to control the motors.</p>
-    <p>A completed version of the code can be found <a href="https://makecode.microbit.org/_Mi869DcUEhwP">here</a></p>
+    <p><strong>Short on time?</strong> <a href="https://makecode.microbit.org/_Mi869DcUEhwP">Download a completed version of the code.</a></p>
 </div>
-<div class="project-steps">
-    <h3>Listen to the radio</h3>
+<hr>
+<div class="project-steps__info">
+    <h2>Listen to the radio</h2>
     <p>First we will set up the Microbit to listen for instructions from the remote controller and store them in two variables <code>xValue</code> and <code>yValue</code>
 </div>
 <div class="project-steps__step">
@@ -48,8 +50,9 @@ title: "Robot board"
     <p>Next we need to check if <code>name</code> is set to y, repeat the two steps above replacing "x" and <code>xValue</code> with "y" and <code>yValue</code></p>
     <img src="012.png" width="346" height="210" alt="">
 </div>
-<div class="project-steps">
-    <h3>Processing the data</h3>
+<hr>
+<div class="project-steps__info">
+    <h2>Processing the data</h2>
     <p>Our board can now receive the x and y values from the remote controller and store them in <code>xValue</code> and <code>yValue</code>.</p>
     <p>Now we just need to take these numbers and use them to turn the motors on and off</p>
     <p>To make the robot move we are going to use the <code>yValue</code>, tilting the board forward and backwards, to move the robot forwards and backwards. To make this happen we need to turn both wheels at the same speed in the same direction. If <code>yValue</code> is a positive number we'll go forward, if it's negative we'll go backwards.</p>
@@ -72,8 +75,9 @@ title: "Robot board"
     <p>Use <code>0 &#62; 0</code> blocks from the Logic drawer to check if <code>xValue</code> and <code>yValue</code> are greater than 0</p>
     <img src="014.png" width="462" height="337" alt="">
 </div>
-<div class="project-steps">
-    <h3>Add the Motor package</h3>
+<hr>
+<div class="project-steps__info">
+    <h2>Add the Motor package</h2>
     <p>All that is left is to actually turn the motors on and off. We will use a special block for this that needs to be added as a package.</p>
 </div>
 <div class="project-steps__step">
@@ -83,12 +87,13 @@ title: "Robot board"
     <p>Press 'Enter' and then click on the box that says 'Kitronik-motor-driver' to add the package</p>
     <img src="015.png" width="800" height="274" alt="">
 </div>
-<div class="project-steps">
+<div class="project-steps__step">
     <p>You have added a new drawer to your editor, called 'Kitronik'. Click on 'Motor driver' and you will find two new blocks to turn motors on and off.</p>
     <img src="016.png" width="597" height="153" alt="">
 </div>
-<div class="project-steps">
-    <h3>Code the motors</h3>
+<hr>
+<div class="project-steps__info">
+    <h2>Code the motors</h2>
     <p>Now we can finish our <code>forever</code> loop, adding <code>motor</code> blocks for each wheel.</p>
 </div>
 <div class="project-steps__step">
@@ -111,7 +116,8 @@ title: "Robot board"
     <p>Change the motor to 2 and replace <code>leftWheel</code> with <code>rightWheel</code></p>
     <img src="019.png" width="594" height="363" alt="">   
 </div>
-<div class="project-steps">
-    <h3>Control your robot!</h3>
+<hr>
+<div class="project-steps__info">
+    <h2>Control your robot!</h2>
     <p>The robot board is finished! Download this code onto a Microbit and plug it into your robot. Use your <a href="../remote-controller">Remote controller board</a> to move your robot by tilting it forwards, backwards, left and right.</p>
 </div>
