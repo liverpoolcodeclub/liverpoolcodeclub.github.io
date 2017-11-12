@@ -39,25 +39,35 @@ title: "Make your micro:bit squeal!"
 <div class="project-steps__info">
     <p>Let’s vary the tone when we <strong>tilt</strong> the microbit!</p>
     <p>We’ll make it so that the lowest sound is a Middle C (260 hertz) and the highest is a High C (1040 hertz).</p>
+    <p><strong>Remember those two numbers</strong> – they will come in useful!</p>
+</div>
+<div class="project-steps__step">
+    <p>Rather than setting the <code>hertz</code> value only once, when then micro:bit starts up, we want to constantly update the <code>hertz</code> based on the micro:bit’s current position.</p>
+    <p>So, move your code from the <code>on start</code> block into the <code>forever</code> block.</p>
+    <img src="step-05.png" width="404" height="297" alt="">
 </div>
 <div class="project-steps__step">
     <p>Replace the number <code>520</code> with a <code>map</code> block.</p>
-    <img src="step-05.png" width="453" height="299" alt="">
+    <img src="step-06.png" width="440" height="304" alt="">
     <p>Map converts a number on one scale to a number at the equivalent position on another scale.</p>
 </div>
 <div class="project-steps__step">
     <p>Find the <code>acceleration (mg) x</code> block, and plug it into the first part of the <code>map</code> block.</p>
-    <img src="step-06.png" width="640" height="312" alt="">
+    <img src="step-07.png" width="624" height="301" alt="">
 </div>
 <div class="project-steps__step">
     <p>The <code>acceleration (mg) x</code> block returns a number between <code>-1023</code> (when the microbit is tilted all the way to the left) and <code>+1023</code> (when the microbit is tilted all the way to the right).</p>
     <p>Type <code>-1023</code> into the <code>from low</code> block, and <code>1023</code> into the <code>from high</code> block.</p>
-    <img src="step-07.png" width="630" height="320" alt="">
+    <img src="step-08.png" width="625" height="297" alt="">
 </div>
 <div class="project-steps__step">
     <p>The lowest sound we want to play is Middle C (260 hertz), so type <code>260</code> in the <code>to low</code> box.</p>
-    <img src="step-08.png" width="631" height="316" alt="">
+    <img src="step-09.png" width="625" height="314" alt="">
+</div>
+<div class="project-steps__step">
     <p>What do you think we should type into the <code>to high</code> box, so that it plays a High C?</p>
+    <img src="step-10.png" width="620" height="297" alt="">
+    <p>If you’re stuck, remind yourself of some of the <strong>important numbers</strong> we mentioned earlier on!</p>
 </div>
 <div class="project-steps__step">
     <p>Download the code, and tilt your microbit. The tone will go up and down as you tilt the microbit to the left and right.</p>
@@ -83,5 +93,5 @@ title: "Make your micro:bit squeal!"
 <div class="project-steps__step">
     <p>Once you’ve done that, how might you vary the tone based on <strong>how near one microbit is to another</strong>?</p>
     <p>The following code blocks might come in useful:</p>
-    <img src="step-09.png" width="739" height="359" alt="">
+    <img src="step-11.png" width="739" height="359" alt="">
 </div>
