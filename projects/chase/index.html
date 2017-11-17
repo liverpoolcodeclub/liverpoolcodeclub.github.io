@@ -1,0 +1,121 @@
+---
+layout: project
+title: "Hand-held chase game"
+---
+<div class="project-steps__info">
+    <p>In this project, we’re going to create a hand-held game, where you tilt the microbit to control a character which is trying to catch a flashing enemy on the screen.</p>
+</div>
+<div class="project-steps__info">
+    <h2>Creating the characters</h2>
+</div>
+<div class="project-steps__step">
+    <p>Start a new project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Make two new variables: one called <code>hero</code> and another called <code>enemy</code>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Drag a <code>set item to</code> block into your <code>on start</code> block, and change the “<code>item</code>” to “<code>enemy</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>create sprite at</code> block in the Advanced &gt; Game drawer, and connect it to the end of your <code>set enemy to</code> block.</p>
+    <p>Take a look at the microbit preview on the left. You’ll see that a dot has appeared in the centre of the screen. This is the enemy.</p>
+    <p>The game won’t be much fun if the enemy always appears at the same position on the screen every time. Let’s make it appear at a random position…</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>pick random 0 to 4</code> block in the Math drawer, and use it to replace <em>both</em> “<code>2</code>” coordinates in the <code>create sprite at</code> block.</p>
+    <p>Every time your code runs, the <code>pick random 0 to 4</code> block will return a number that’s either 0, 1, 2, 3, or 4.</p>
+    <p>Each of those five numbers—0, 1, 2, 3, 4, 5—corresponds with one of the 5 rows or columns in your microbit’s LED display.</p>
+    <p>So, each time your microbit restarts, the enemy dot will appear at a different, random location.</p>
+</div>
+<div class="project-steps__step">
+    <p>Download your code and try it out! Does the enemy dot appear at a different location each time you restart the microbit?</p>
+</div>
+<div class="project-steps__step">
+    <p>Now, can you add a <em>second</em> sprite, assigned to your <code>hero</code> variable?</p>
+    <p>The hero doesn’t need to be randomly positioned, so you can leave their <code>x</code> and <code>y</code> values at “<code>2</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Our hero and enemy look kinda similar. Let’s make the enemy <em>flash</em>, so we can tell them apart.</p>
+    <p>Find the <code>item set x to 0</code> block in Advanced &gt; Game, and add it to the end of your code.</p>
+</div>
+<div class="project-steps__step">
+    <p>Change the “<code>item</code>” to “<code>enemy</code>”, the “<code>x</code>” to “<code>blink</code>”, and the “<code>0</code>” to “<code>500</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Download your code and see whether you can tell the difference between the hero and the enemy.</p>
+</div>
+<hr>
+<div class="project-steps__info">
+    <h2>Controlling the hero</h2>
+    <p>Now we have a hero to chase our enemy, let’s make them move!</p>
+    <p>We want to constantly check for which way the microbit is being tilted, and then adjust the position of <code>hero</code> to match.</p>
+    <p>The way we can detect tilt is via the <code>acceleration</code> block.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>while true</code> loop to your code.</p>
+</div>
+<div class="project-steps__step">
+    <p>Put an <code>if</code> block inside your <code>while</code> loop, and then plug a <code>0 &gt; 0</code> comparison block into it.</p>
+</div>
+<div class="project-steps__step">
+    <p>Put an <code>acceleration x</code> block into the first part of the comparison block, and leave the number in the second part as “<code>0</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Finally, find the <code>item change x by 1</code> block inside Advanced &gt; Game, and clip it inside your <code>if</code> block. Change the “<code>item</code>” to “<code>hero</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Duplicate the entire <code>if</code> block, with all its contents, three more times, and tweak it so that:</p>
+    <ul>
+        <li>If <code>acceleration x</code> &lt; <code>0</code>, then change <code>x</code> by <code>-1</code></li>
+        <li>If <code>acceleration y</code> &gt; <code>0</code>, then change <code>y</code> by <code>1</code></li>
+        <li>If <code>acceleration y</code> &lt; <code>0</code>, then change <code>y</code> by <code>-1</code></li>
+    </ul>
+    <p>In the end, your code should look like this:</code>
+</div>
+<div class="project-steps__step">
+    <p>Download your code, and try it out by tilting the microbit.</p>
+</div>
+<div class="project-steps__step">
+    <p>Does the hero move a little too quickly?</p>
+    <p>Try adding a <code>pause 100</code> block, at the end of each of the four <code>if</code> blocks.</p>
+    <p>This will slow down the <code>while</code> loop, meaning the hero moves a little less quickly when you tilt the device.</p>
+</div>
+<hr>
+<div class="project-steps__info">
+    <h2>Keeping score</h2>
+    <p>Now we can move the hero, we need to make it so that they can catch the enemy, and earn points!</p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
+<div class="project-steps__step">
+    <p></p>
+</div>
