@@ -83,39 +83,44 @@ title: "Hand-held chase game"
 </div>
 <hr>
 <div class="project-steps__info">
+    <h2>Catching the enemy</h2>
+    <p>Now we can move the hero, we need to make it so that they can catch the enemy!</p>
+    <p>There is a block called “<code>touching</code>” that lets us detect whether one sprite is on top of another. We can use it to detect whether our hero has caught the enemy.</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a new <code>if</code> block, right at the start of your <code>while</code> block.</p>
+</div>
+<div class="project-steps__step">
+    <p>Drag in an <code>item touching []</code> block, and fill it with the <code>hero</code> and <code>enemy</code> variables, like this:</p>
+</div>
+<div class="project-steps__step">
+    <p>Add a half second pause (so that the player has time to notice that that enemy has been caught), by adding a <code>pause (ms) 100</code> block and changing the number to “<code>500</code>”.</p>
+</div>
+<div class="project-steps__step">
+    <p>Finally, set a new position for the enemy, so that the hero can attempt to catch him again!</p>
+    <p>Use two <code>item set x to 0</code> blocks from Advanced &gt; Game, like so:</p>
+</div>
+<div class="project-steps__step">
+    <p>Download the code and try it out!</p>
+</div>
+<hr>
+<div class="project-steps__info">
     <h2>Keeping score</h2>
-    <p>Now we can move the hero, we need to make it so that they can catch the enemy, and earn points!</p>
+    <p>It would be fun if we kept track of how many times the hero caught the enemy, and finally declare victory after the enemy is caught five times.</p>
 </div>
 <div class="project-steps__step">
-    <p></p>
+    <p>Drag the <code>set score 0</code> block from Advanced &gt; Game into your code, just before the <code>while</code> loop.</p>
 </div>
 <div class="project-steps__step">
-    <p></p>
+    <p>Rather than “<code>while true</code>”, use some new blocks to change it to “<code>while score &lt; 5</code>”, like this:</p>
 </div>
 <div class="project-steps__step">
-    <p></p>
+    <p>Add a <code>change score by 1</code> block, and a <code>show score</code> block inside our <code>if hero touching enemy</code> condition:</p>
 </div>
 <div class="project-steps__step">
-    <p></p>
+    <p>And finally, right a the end of the game, after your <code>while</code> loop finishes, add a <code>game over</code> block.</p>
+    <p>This will display a nice animation when we catch the enemy a fifth and final time.</p>
 </div>
 <div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
-</div>
-<div class="project-steps__step">
-    <p></p>
+    <p>Download your code and try it out!</p>
 </div>
