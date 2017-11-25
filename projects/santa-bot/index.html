@@ -24,19 +24,13 @@ title: "Santa bot"
     <img src="step-01.png" width="609" height="600" alt="" style="border-radius: 0; margin: 3em auto 0 auto;">
 </div>
 <div class="project-steps__step">
-    <p>Connect the micro:bit to a breakout board. Make sure the LEDs are facing down.</p>
+    <p>Connect the micro:bit to a breakout board.</p>
     <img src="step-02.png" width="609" height="600" alt="" style="border-radius: 0; margin: 3em auto 0 auto;">
 </div>
 <div class="project-steps__step">
-    <p>Add a wire to pin 0 and one to GND</p>
-    <img src="step-03.png" width="920" height="360" alt="">
-</div>
-<div class="project-steps__step">
-    <p>Connect a buzzer to betwen these wires.</p>
-    <img src="step-03.png" width="340" height="142" alt="">
-</div>
-<div class="project-steps__step">
+    <p>Add a wire to pin 0 and one to GND, connect a buzzer between these wires.</p>
     <p>Connect the battery box to the microbit.</p>
+    <img src="step-03.png" width="920" height="360" alt="">
 </div>
 <div class="project-steps__step">
     <p>Put the Microbit into the smaller box, facing down as shown.</p>
@@ -52,38 +46,42 @@ title: "Santa bot"
 </div>
 <hr>
 <div class="project-steps__info">
-    <p>Now we can write the code for today. Our santa bot is going to play different tunes when we press the buttons and show an animation on the LEDs.</p>
-    <p>We will need two new blocks <code>function</code> and <code>Thread</code></p>
-
+    <p>Now we can write the code. Our santa bot is going to play tunes when we shake him and show an animation on the LEDs.</p>
+    <p>To make out code easier to read we  will need a new block <code>function</code></p>
+    <p>This lets us make our own block we can use in different parts of our code</p>
 </div>
 <div class="project-steps__info">
-    <p>Let’s vary the tone when we <strong>tilt</strong> the microbit!</p>
-    <p>We’ll make it so that the lowest sound is a Middle C (260 hertz) and the highest is a High C (1040 hertz).</p>
-    <p><strong>Remember those two numbers</strong> – they will come in useful!</p>
+    <p>Start by opening the <code>function</code> block in the advanced section</p>
+    <p>Click 'Make a function' and call it Jinglebells</p>
+    <img src="step-07.png" width="404" height="297" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Rather than setting the <code>hertz</code> value only once, when then micro:bit starts up, we want to constantly update the <code>hertz</code> based on the micro:bit’s current position.</p>
-    <p>So, move your code from the <code>on start</code> block into the <code>forever</code> block.</p>
-    <img src="step-05.png" width="404" height="297" alt="">
+    <p>Drag a <code>repeat</code> block into our Jinglebells funtion</p>
+    <img src="step-08.png" width="404" height="297" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Replace the number <code>520</code> with a <code>map</code> block.</p>
-    <img src="step-06.png" width="440" height="304" alt="">
-    <p>Map converts a number on one scale to a number at the equivalent position on another scale.</p>
+    <p>Add three <code>play tone</code> blocks inside the repeat block</p>
+    <p>Set them all to Middle E</p>
+    <p>Play the first two for 1 beat and the last for 2 beats</>    
+    <img src="step-09.png" width="440" height="304" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Find the <code>acceleration (mg) x</code> block, and plug it into the first part of the <code>map</code> block.</p>
-    <img src="step-07.png" width="624" height="301" alt="">
+    <p>Add six more blocks and set them up like this.</p>
+    <img src="step-10.png" width="624" height="301" alt="">
 </div>
 <div class="project-steps__step">
-    <p>The <code>acceleration (mg) x</code> block returns a number between <code>-1023</code> (when the microbit is tilted all the way to the left) and <code>+1023</code> (when the microbit is tilted all the way to the right).</p>
-    <p>Type <code>-1023</code> into the <code>from low</code> block, and <code>1023</code> into the <code>from high</code> block.</p>
-    <img src="step-08.png" width="625" height="297" alt="">
+    <p>Now we have a new block called JingleBells we can use anywhere in our code.</p>
+    <p>When we use it in our code it will play the first part of Jingle Bells.</p>
+    <p>Add an <code>On shake</code> block and then add our new function</p>
+    <img src="step-11.png" width="625" height="297" alt="">
 </div>
 <div class="project-steps__step">
-    <p>The lowest sound we want to play is Middle C (260 hertz), so type <code>260</code> in the <code>to low</code> box.</p>
-    <img src="step-09.png" width="625" height="314" alt="">
+    <p>Now add some <code>show icon</code> blocks to the <code>forver</code> loop to make an animation</p>
 </div>
+<div class="project-steps__step">
+    <p>Download this code onto your microbit and test it works.</p>
+</div>
+<hr>
 <div class="project-steps__step">
     <p>What do you think we should type into the <code>to high</code> box, so that it plays a High C?</p>
     <img src="step-10.png" width="620" height="297" alt="">
