@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="836"
+   height="769"
+   version="1.1"
+   viewBox="0 0 836 769"
+   id="svg6774"
+   sodipodi:docname="card box 4.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata6780">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6778" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1315"
+     id="namedview6776"
+     showgrid="false"
+     inkscape:zoom="1.2275683"
+     inkscape:cx="183.94689"
+     inkscape:cy="384.5"
+     inkscape:window-x="-13"
+     inkscape:window-y="-13"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6774" />
+  <desc
+     id="desc6720">cardbox by Templatemaker.nl</desc>
+  <!-- pageSet -->
+  <g
+     class="page"
+     id="page-1"
+     transform="translate(-0.81461864,-19.550847)">
+    <g
+       style="fill:none;stroke:#d8542c;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:groupmode="layer"
+       id="cut"
+       transform="translate(124.01575,124.01575)"
+       inkscape:label="cut">
+      <path
+         id="cut-L"
+         d="m 0,0 v 0 l 1.1,-12.3 3.2,-11.9 5.2,-11.2 7.1,-10.2 8.7,-8.7 10.1,-7.1 11.2,-5.2 12,-3.2 12.3,-1.1 h 88.5 v 0 l 12.4,1.1 11.9,3.2 11.2,5.2 10.1,7.1 8.7,8.7 7.1,10.2 5.2,11.2 3.2,11.9 1.1,12.3 v 99.2 0 -63.8 H 310 l 8,39.9 8,8 v 15.9 h 3.5 v 0 h 115.2 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 h 115.1 v 0 h 3.6 V 83.3 l 8,-8 7.9,-39.9 h 79.8 v 63.8 322.5 0 h -3.6 v 15.9 l -8,8 -7.9,39.8 h -79.8 v -63.7 99.2 0 l -1,12.3 -3.2,11.9 -5.3,11.2 -7,10.1 -8.8,8.8 -10.1,7 -11.2,5.3 -11.9,3.2 -12.3,1 h -88.6 v 0 l -12.3,-1 -11.9,-3.2 -11.2,-5.3 -10.2,-7 -8.7,-8.8 -7.1,-10.1 -5.2,-11.2 -3.2,-11.9 -1.1,-12.3 v -99.2 0 63.7 h -79.7 l -8,-39.8 -7.9,-8 V 421.7 H 230.3 0 L -70.9,400.4 V 120.5 L 0,99.2 V 0"
+         inkscape:connector-curvature="0" />
+      <path
+         id="cut-L2"
+         d="M 559.8,520.9 H 528 v -3.6"
+         inkscape:connector-curvature="0" />
+      <path
+         id="cut-L3"
+         d="m 329.5,520.9 h 31.9 v -3.6"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       style="fill:none;stroke:#0e7bc9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:8, 4"
+       inkscape:groupmode="layer"
+       id="fold"
+       transform="translate(124.01575,124.01575)"
+       inkscape:label="fold">
+      <path
+         id="fold-P_0"
+         d="M 0,99.2 H 230.3"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_1"
+         d="M 329.5,421.7 H 559.8"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_2"
+         d="M 0,3.5 H 230.3"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_3"
+         d="M 230.3,99.2 V 421.7"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_4"
+         d="M 329.5,99.2 V 421.7"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_5"
+         d="M 559.8,99.2 V 421.7"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_6"
+         d="M 0,99.2 V 421.7"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_7"
+         d="m 559.8,99.2 h 99.3"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_8"
+         d="m 230.3,421.7 h 99.2"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_9"
+         d="m 559.8,421.7 h 99.3"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-P_10"
+         d="m 230.3,99.2 h 99.2"
+         inkscape:connector-curvature="0" />
+      <path
+         id="fold-F18"
+         d="M 361.4,517.3 H 528"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <!-- /pageSet -->
+  <rect
+     style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.37795275;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect7325"
+     height="151.18111"
+     x="83.091103"
+     y="574.30615"
+     ry="0"
+     width="226.77165"
+     rx="0" />
+</svg>
