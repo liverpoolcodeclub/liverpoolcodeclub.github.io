@@ -1,0 +1,235 @@
+---
+layout: project
+title: "Strength Tester!"
+---
+<div class="project-steps__info">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>For this project, you will need:</p>
+            <ul class="project-materials">
+                <li>1 &times; Microbit</li>
+                <li>1 &times; velostat fabric strip</li>
+                <li>2 &times; wire with exposed ends</li>
+                <li>1 &times; plastic backing board</li>
+                <li>4 &times; copper tape strip</li>
+                <li>4 &times; wire with crocodile clips</li>
+                <li>1 &times; Neopixel LED strip, with wires</li>
+                <li>1 &times; resistor (at least 100 Ω)</li>
+                <li>Sticky tape (Gorilla tape is best)</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <a href="craft-001.jpg" target="_blank">
+                <img src="craft-001.jpg" width="600" height="450" alt="" style="margin: 0">
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Making the circuit board</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Rather than using a breadboard, today we’ll make everything we need from scratch.</p>
+            <p>We’ll start by making a pressure sensor out of two wires, some sticky tape, and a special carbon-rich fabric called Velostat.</p>
+        </div>
+        <div class="col-sm-5 col-sm-push-1">
+            <div class="alert alert-info" style="font-size: 0.8em;">
+                <p><strong>How it works:</strong> Velostat is a fabric made out of plastic and carbon dust. Carbon conducts electricity. When you compress the fabric, the carbon dust particles get closer together, and conduct electricity better and better.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="project-steps__step">
+    <p>Fold your strip of Velostat in three, so it makes a little square.</p>
+    <img src="craft-002.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Fan out one of the exposed ends of one of your loose wires, place it on top of the Velostat square, and seal it with Gorilla tape.</p>
+    <img src="craft-003.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Repeat on the opposite side with the second loose wire.</p>
+    <img src="craft-004.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__info">
+    <p>You’ve made a pressure sensor! Now we need to make the rest of our electrical circuit.</p>
+</div>
+<div class="project-steps__step">
+    <p>Take your black plastic backing board, and stick a pad of copper tape into each of the four corners.</p>
+    <img src="craft-005.jpg" width="600" height="450" alt="">
+    <p>We’ll refer to these four pads—going clockwise from the top right—as the Ground Pad, Pressure Data Pad, Power Pad, and LED Data Pad.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find your resistor, and tape it down so that it’s touching the Ground Pad and the Pressure Pad.</p>
+    <img src="craft-006.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Get the two loose ends of your pressure sensor, and tape one onto the Pressure Data Pad, and one onto the Power Pad.</p>
+    <img src="craft-007.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Now find your strip of Neopixels and take a close look at it. The white squares are LEDs.</p>
+    <img src="craft-008.jpg" width="600" height="450" alt="">
+    <p><strong>How many LEDs does your strip have?</strong></p>
+</div>
+<div class="project-steps__step">
+    <p>Between each LED is a trio of copper terminals, labelled “+5V”, “Din/DO”, and “GND”. These labels line up with the three wires coming out of the top of the strip:</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Wire</th>
+                <th>What it’s for</th>
+            </tr>
+        </thead>
+        <tr>
+            <td><code>+5V</code></td>
+            <td>Red wire</td>
+            <td>Power</td>
+        </tr>
+        <tr>
+            <td><code>Din/DO</code></td>
+            <td>Brown wire</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td><code>GND</code></td>
+            <td>Black wire</td>
+            <td>Ground</td>
+        </tr>
+    </table>
+</div>
+<div class="project-steps__step">
+    <p>Tape the wires from your LED strip onto the corresponding pads on your circuit board:</p>
+    <ul>
+        <li><strong>Red wire (Power)</strong> taped onto <strong>Power Pad</strong></li>
+        <li><strong>Brown wire (Data)</strong> taped onto <strong>LED Data Pad</strong></li>
+        <li><strong>Black wire (Ground)</strong> taped onto <strong>Ground Pad</strong></li>
+    </ul>
+    <img src="craft-009.jpg" width="600" height="450" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Finally, connect your circuit board up to your microbit, with crocodile clip wires.</p>
+    <ul>
+        <li><strong>microbit Pin 0</strong> clipped onto <strong>LED Data Pad</strong></li>
+        <li><strong>microbit Pin 1</strong> clipped onto <strong>Pressure Data Pad</strong></li>
+        <li><strong>microbit 3V</strong> clipped onto <strong>Power Pad</strong></li>
+        <li><strong>microbit 0V</strong> clipped onto <strong>Ground Pad</strong></li>
+    </ul>
+    <img src="craft-010.jpg" width="600" height="450" alt="">
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>How sensitive is your sensor?</h3>
+    <p>Because you’ve hand-made your own pressure sensor, the values it returns might be different to everyone else’s.</p>
+    <p>Before we can use the pressure sensor to control the LED strip, we need to get an idea of how much electricity passes through the sensor when it’s being pressed, and when it’s not being pressed.</p>
+</div>
+<div class="project-steps__step">
+    <p>Start a new project at <a href="https://makecode.microbit.org" target="_blank">makecode.microbit.org</a>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Drag some <code>on button A pressed</code>, <code>show number</code>, and <code>analog read pin</code> blocks in, as shown below:</p>
+    <img src="code-001.png" width="600" height="250" alt="">
+    <p>Make sure you have set <code>analog read pin</code> to “P1”, because that’s the pin that your Pressure Data Pad (and the pressure sensor) are connected to.
+</div>
+<div class="project-steps__step">
+    <p>Download the code onto your microbit, and try pressing Button A while applying different levels of pressure to the pressure sensor.</p>
+    <ul>
+        <li>What number does the microbit display when the pressure sensor isn’t being touched at all?</li>
+        <li>What number does the microbit display when the pressure sensor is being pressed really hard?</li>
+    </ul>
+    <p>Make a note of these two numbers. The first number (not pressed) should be somewhere around 0–200, and the second number (pressed hard) should be around 400–600.</p>
+    <p>Let’s use those numbers to turn the lights on when you press the sensor.</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Controlling the LED strip</h3>
+</div>
+<div class="project-steps__step">
+    <p>Make a new variable called <code>neopixel_strip</code>.</p>
+    <img src="code-002.png" width="600" height="250" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Drag a <code>set item to</code> block into your <code>on start</code> block, and change the <code>item</code> dropdown to <code>neopixel_strip</code>.</p>
+    <img src="code-003.png" width="600" height="180" alt="">
+</div>
+<div class="project-steps__step">
+    <p>To control our strip of LEDs, we need to import the Neopixel block package. In the sidebar, click “Advanced” and then “Add Package”.</p>
+    <img src="code-004.png" width="1200" height="600" alt="">
+    <p>Click on the “neopixel” package, to add it to your project.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the new Neopixel blocks in the sidebar, and drag the <code>Neopixel at pin…</code> block onto the end of your <code>neopixel_strip</code> variable assignment.</p>
+    <img src="code-005.png" width="1000" height="230" alt="">
+    <p>Make sure the pin is set to “P0”, because that’s the pin your LED Data Pad (and the data wire from the LED strip) are connected to.</p>
+    <p>Also, remember to change the number “24” to the number of LEDs that are on your LED strip.</p>
+</div>
+<div class="project-steps__step">
+    <p>Drag a <code>pause (ms) 100</code> block into the start of your <code>forever</code> loop.</p>
+    <img src="code-006.png" width="600" height="220" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Make a new variable called <code>pressure</code>.</p>
+    <img src="code-007.png" width="600" height="300" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add a <code>set item to</code> block to your <code>forever</code> loop, and change the <code>item</code> dropdown to <code>pressure</code>.</p>
+    <img src="code-008.png" width="600" height="250" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Find another <code>analog read pin</code> block, clip it into the end of your <code>set pressure to</code> block, and change the pin number from “P0” to “P1”.</p>
+    <img src="code-009.png" width="600" height="250" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>if… else…</code> block, and make it look like this, where “300” should be a number roughly halfway between the two strength numbers you discovered earlier:</p>
+    <img src="code-010.png" width="600" height="350" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Add two <code>show color</code> Neopixel blocks to your code, and pick two different colours for the two options. (Red and green are a good combination!)</p>
+    <img src="code-011.png" width="700" height="390" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code to your microbit, and try pressing and releasing the pressure sensor. What happens?</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Extension: Variable pressure levels</h3>
+    <p>Your pressure sensor is quite sensitive! It can differentiate between a very soft touch, a super hard press, and everything between.</p>
+    <p>Rather than just switching between two colours, let’s change our code so that it cycles through a colour rainbow, based on how hard you press.</p>
+</div>
+<div class="project-steps__step">
+    <p>Remove the whole <code>if… else…</code> block, and everything inside it.</p>
+    <img src="code-009.png" width="600" height="250" alt="">
+</div>
+<div class="project-steps__step">
+    <p>In its place, put a <code>show color</code> block from the Neopixel drawer. Remember to change the <code>item</code> dropdown to <code>neopixel_strip</code>:</p>
+    <img src="code-012.png" width="600" height="290" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Replace the <code>red</code> variable in your <code>show color</code> block with a <code>hue… saturation… luminosity…</code> block from the Neopixel drawer.</p>
+    <p>Set the “hue” value to a <code>pressure</code> variable block. And set the “saturation” to 99, and the “luminosity” to 50.</p>
+    <img src="code-013.png" width="1000" height="300" alt="">
+</div>
+<div class="project-steps__step">
+    <p>Download the code to your microbit, and try it out. What happens when you slowly increase the pressure on the pressure pad?</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Extension: Strength tester!</h3>
+    <p>Funfairs and carnivals often have a “Strength tester” or “High striker” game where you hit a lever with a big hammer, and a puck shoots up a tower and rings a bell, or lights shoot up, showing you how strong you are.</p>
+    <a href="https://www.flickr.com/photos/clocky/8099189080/" target="_blank"><img src="models.jpg" width="600" height="300" alt=""></a>
+    <p>Can you use the following blocks to build a “strength tester” like that?</p>
+    <img src="code-014.png" width="600" height="360" alt="">
+    <p><strong>Tip:</strong> When no pressure is being applied to the sensor, all of the LEDs should be off. But as you apply more and more pressure, the LEDs should light up one by one, until, at your strongest, all of the LEDs are lit.</p>
+</div>
