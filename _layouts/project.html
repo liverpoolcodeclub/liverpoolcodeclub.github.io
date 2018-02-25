@@ -14,7 +14,16 @@ layout: default
 </div>
 <div class="project-info">
   <div class="container">
-    <p class="project-info__authors">Projects designed and written by <a href="https://twitter.com/huffeec" rel="author">Chris Huffee</a> &amp; <a href="https://twitter.com/zarino" rel="author">Zarino Zappia</a> 2017.</p>
+    <p class="project-info__authors">
+      {% if page.authors %}
+        {{ page.authors }}
+      {% else %}
+        Projects designed and written by
+        <a href="https://twitter.com/huffeec" rel="author">Chris Huffee</a>
+        &amp;
+        <a href="https://twitter.com/zarino" rel="author">Zarino Zappia</a>
+      {% endif %}
+    </p>
     <p class="project-info__rights"><a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
   </div>
 </div>
