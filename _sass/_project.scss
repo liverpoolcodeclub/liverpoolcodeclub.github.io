@@ -43,14 +43,33 @@
 
   hr {
     border-color: #ccc;
-    margin: 3em 4em;
+    margin: 3em 0em;
+
+    @media (min-width: $screen-md) {
+      margin: 3em 4em;
+    }
+  }
+}
+
+.project-steps__info {
+  padding: 1em 0em;
+
+  @media (min-width: $screen-md) {
+    padding: 1em 4em;
+  }
+}
+
+.project-steps__step {
+  position: relative;
+  padding: 1em 0em 1em 2em;
+
+  @media (min-width: $screen-md) {
+    padding: 1em 4em;
   }
 }
 
 .project-steps__info,
 .project-steps__step {
-    padding: 1em 4em;
-
     p, li {
       line-height: 1.8em;
     }
@@ -86,10 +105,6 @@
     }
 }
 
-.project-steps__step {
-  position: relative;
-}
-
 .project-steps__step--completed {
   p, li, th, td {
     text-decoration: line-through;
@@ -107,12 +122,16 @@
   height: 1.3em;
   width: 1.3em;
   position: absolute;
-  left: 1em;
+  left: 0;
   top: 1.2em;
   background: white;
   border: 2px solid #339933;
   border-radius: 0.25em;
   cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    left: 1em;
+  }
 
   .project-steps__step--completed & {
     background: url('../img/checkmark.svg');
