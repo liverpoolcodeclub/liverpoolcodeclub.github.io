@@ -49,64 +49,64 @@ authors: >
        <p></p>     
 </div>
 <div class="project-steps__step">
-    <p>Create a variable called zip_led, we’ll use this to set up the Zip Halo.</p>
-    <p>Add a set zip_led to block to your code.</p>
+    <p>Create a variable called <code>zip_led</code>, we’ll use this to set up the Zip Halo.</p>
+    <p>Add a <code>set zip_led</code> to block to your code.</p>
     <img src="step-002.jpg" width="600" height="104" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Add the block from Neopixels that starts ‘Neopixel at P0..’ and join this to the set zip_led block. This block tells the microbit how many pixels our board has and which pin we are using to control it.</p> 
+    <p>Add the block from Neopixels that starts <code>‘Neopixel at P0..’</code> and join this to the <code>set zip_led block</code>. This block tells the microbit how many pixels our board has and which pin we are using to control it.</p> 
     <p>Your code should now look like this.</p>
     <img src="step-003.jpg" width="600" height="87" alt="">
 </div>
 <div class="project-steps__step">
-    <p>We will start the game by pressing A+B so get an ‘On button A+B pressed' block.</p> 
+    <p>We will start the game by pressing A+B so get an <code>‘On button A+B pressed'</code> block.</p> 
 </div>
 <div class="project-steps__step">
-    <p>Create two new variables called; ‘position’ and ‘direction’.</p>
+    <p>Create two new variables called; <code>‘position’</code> and <code>‘direction’</code>.</p>
     <p>Position will remember where our ball is. We will start at 0, the first position on our list.</p>
     <p>Direction is what we use to remember which way it’s moving. This will either be 1 if the ball is moving left to right, or -1 if the ball is moving right to left.</p>
 </div>
 <div class="project-steps__step">
-    <p>Add set blocks for these new variables to the ‘On button A+B' block.</p>
+    <p>Add set blocks for these new variables to the <code>‘On button A+B'</code> block.</p>
     <img src="step-004.jpg" width="600" height="288" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Next add a ‘While’ block from loops. This loop will keep running the code we add to the ‘do’ part over and over as long as the code we add to the ‘while’ part is true.</p>
+    <p>Next add a <code>‘While’</code> block from loops. This loop will keep running the code we add to the <code>‘do’</code> part over and over as long as the code we add to the <code>‘while’</code> part is true.</p>
     <img src="step-005.jpg" width="600" height="408" alt="">
 </div>
 <div class="project-steps__info">
        <p>In our game we want to light the first pixel in our array, wait for a little bit and then turn it off and light the next one. If we keep doing this it will look like the light is moving across the board. We want to keep doing it until we get to the end of our list.</p>
 </div>
 <div class="project-steps__step">
-    <p>In the while part of the loop add this code.</p>
+    <p>In the <code>while</code> part of the loop add this code.</p>
     <img src="step-006.jpg" width="600" height="140" alt="">
-    <p>This checks that the value stored in ‘position’ isn’t bigger than the number of items in our list or smaller than 0.</p>
+    <p>This checks that the value stored in <code>‘position’</code> isn’t bigger than the number of items in our list or smaller than 0.</p>
 </div>
 <div class="project-steps__info">
-    <p>Now in the ‘Do’ part add some blocks to control the neopixels. They will all need to be set to zip_led instead of item so the code knows to use the lights we set up in the 'On start block'.</p>
+    <p>Now in the <code>‘Do’</code> part add some blocks to control the neopixels. They will all need to be set to <code>zip_led</code> instead of <code>item</code> so the code knows to use the lights we set up in the <code>'On start'</code> block.</p>
 </div>
 <div class="project-steps__step">
-    <p>First add a clear block to turn all the lights off</p>
+    <p>First add a <code>clear</code> block to turn all the lights off</p>
     <img src="step-007.jpg" width="600" height="340" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Then add a 'Set pixel colour at' block, you can set this to any colour you like.</p>
-    <p>The pixel number should be the value stored in our ‘pixel_number’ list at the number place stored in our 'position' variable.</p>
-    <p>Use a ‘Get value at’ block from arrays and set it up like this.</p>
+    <p>Then add a <code>'Set pixel colour at'</code> block, you can set this to any colour you like.</p>
+    <p>The pixel number should be the value stored in our <code>‘pixel_number’</code> list at the number place stored in our <code>'position'</code> variable.</p>
+    <p>Use a <code>‘Get value at’</code> block from arrays and set it up like this.</p>
     <img src="step-008.jpg" width="600" height="112" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Next add two more set pixel blocks, set them to 17 and 7, these will be your hands when you are juggling. They can be any colour you like but should be different to your ball.
+    <p>Next add two more <code>set pixel</code> blocks, set them to 17 and 7, these will be your hands when you are juggling. They can be any colour you like but should be different to your ball.
 </p>
     <img src="step-009.jpg" width="600" height="192" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Finally add a show block to turn on the lights we have just set up.</p>
+    <p>Finally add a <code>show</code> block to turn on the lights we have just set up.</p>
     <img src="step-010.jpg" width="600" height="156" alt="">
 </div>
 <div class="project-steps__step">
-    <p>At the end of the While section add a ‘change’ block from variables. Use this to change the value stored in ‘position’ by the number stored in ‘direction’.</p>
-    <p>We will also need a pause 500 block at the end of this loop to stop the ball moving too quickly.</p>
+    <p>At the end of the <code>While</code> section add a <code>pause 500</code> block at the end of this loop to stop the ball moving too quickly.</p>
+    <p>We will also need a <code>‘change’</code> block from variables. Use this to change the value stored in <code>‘position’</code> by the number stored in <code>‘direction’</code>.</p>
     <img src="step-011.jpg" width="600" height="230" alt="">
 </div>
 
@@ -120,20 +120,20 @@ authors: >
     <p>So now all we need to do is add some controls to tell the game when to juggle. We’ll use the A and B buttons for this.</p>
 </div>
 <div class="project-steps__step">
-    <p>'Add an On button A pressed block.'</p>
+    <p>'Add an <code>On button A pressed</code> block.'</p>
     <img src="step-012.jpg" width="600" height="226" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Next add an If block, use a block from ‘Logic’ to check if ‘position’ equals 0.</p>
+    <p>Next add an <code>If</code> block, use a block from ‘Logic’ to check if <code>‘position’</code> equals 0.</p>
     <p>Here we are making sure the ball is next to the hand when the button is pressed.</p>
     <img src="step-013.jpg" width="600" height="266" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Inside the if block change the value stored in direction to 1.</p>
+    <p>Inside the <code>if</code> block change the value stored in <code>direction</code> to 1.</p>
     <img src="step-014.jpg" width="600" height="262" alt="">
 </div>
 <div class="project-steps__step">
-    <p>Duplicate all this code for on button b pressed but this time check if position equals one less than the length of the array. If it is change the value in direction to -1.</p>
+    <p>Duplicate all this code for <code>on button b pressed</code> but this time check if <code>position</code> equals one less than the length of the array. If it is change the value in <code>direction</code> to -1.</p>
     <img src="step-014.jpg" width="600" height="139" alt="">
 </div>
 <div class="project-steps__info">
@@ -157,6 +157,7 @@ authors: >
 <div class="project-steps__step">
     <p>What about adding code to increase the speed of the ball slightly every time you score a point?</p>
 </div>
+
 
 
 
