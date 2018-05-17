@@ -90,10 +90,8 @@
       height: auto;
     }
 
-    h2 {
-        font-family: inherit;
-        font-weight: bold;
-        font-size: 1.2em;
+    h2, h3, h4 {
+        color: $color-codeclub-green;
     }
 
     & > :first-child {
