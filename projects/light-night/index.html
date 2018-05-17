@@ -1,0 +1,193 @@
+---
+layout: project
+title: "Light Night fun with Zip Halos and horse heads"
+authors: >
+  Project designed and written by
+  <a href="https://twitter.com/zarino" rel="author">Zarino Zappia</a>
+---
+<div class="project-steps__info">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>For this project, you will need:</p>
+            <ul class="project-materials">
+                <li>1 &times; Microbit</li>
+                <li>1 &times; Zip Halo</li>
+                <li>1 &times; 4.5V battery box with jst connector</li>
+                <li>1 &times; wooden horse head (optional)</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <a href="craft-001.jpg" target="_blank">
+                <img src="img-001.jpg" width="600" height="450" alt="" style="margin: 0">
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Getting set up <span class="time-estimate">5 minutes</span></h3>
+</div>
+<div class="project-steps__step">
+    <p>Open this link to find today’s code:</p>
+    <p><a href="https://makecode.microbit.org/#pub:30366-70373-86304-87739" style="display: block; background: #f3f9e6; padding: 3% 5%; text-align: center; margin: 1.5em 0; border-radius: 0.25em;">
+        https://makecode.microbit.org/#pub:30366-70373-86304-87739
+    </a></p>
+    <p>If you’ve ever used Scratch, this editor should look familiar.</p>
+    <p>Later, you’re going to drag blocks of code from the categories in the middle, to the program area on the right.</p>
+    <p><img src="image1.png" width="1606" height="993" alt="MakeCode editor window, showing how to drag blocks from categories into your program"></p>
+    <p>We’ve already written a very short program to start you off.</p>
+</div>
+<div class="project-steps__step">
+    <p>Press the <strong>“Download”</strong> button to download your code.</p>
+    <p><img src="image2.png" width="600" height="250" alt="Download button" style="border: 1px solid #ddd"></p>
+</div>
+<div class="project-steps__step">
+    <p>Plug a <strong>microbit</strong> into your computer, using a USB cable.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <strong>“microbit.hex” file</strong> in your <strong>Downloads folder</strong>, and drag it onto the <strong>MICROBIT drive</strong>.</p>
+    <p>On the Library laptops, you can get to <strong>Downloads</strong> by pressing the “Files” icon in the launcher on the left.</p>
+    <p><img src="ubuntu-files.jpg" width="600" height="250" alt="" style="border: 1px solid #ddd"></p>
+</div>
+<div class="project-steps__info">
+    <p>A yellow light on the back of your microbit will flash while the file is being copied.</p>
+    <p>Wait until the light has stopped flashing.</p>
+    <p><a href="image3.jpg" target="_blank"><img src="image3.jpg" width="1000" height="750" alt="Yellow light" style="max-width: 30em"></a></p>
+</div>
+<div class="project-steps__step">
+    <p>Once the light has stopped flashing, unplug the microbit, and connect a <strong>battery pack</strong> to the <strong>Zip Halo ring</strong>.</p>
+    <p><a href="image4.jpg" target="_blank"><img src="image4.jpg" width="1000" height="750" alt="J.S.T. connector" style="max-width: 30em"></a></p>
+</div>
+<div class="project-steps__step">
+    <p>What happens when you plug the power in?</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Making animations <span class="time-estimate">10 minutes</span></h3>
+    <p>At the moment, your code is pretty boring – it just shows a single colour when the microbit has power.</p>
+    <p>Let’s change the code to do something more interesting!</p>
+</div>
+<div class="project-steps__step">
+    <p>Remove the <code>[strip] show color [red]</code> block from your code.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>[item] set pixel color at [0] to [red]</code> block, inside the <strong>“Neopixel … More” category</strong>, and drag three copies of it into the end of your <code>on start</code> block.</p>
+    <p><img src="image5.png" width="700" height="350" alt="" style="border: 1px solid #ecf0f1"></p>
+</div>
+<div class="project-steps__step">
+    <p>Change the three blocks so they look like this:</p>
+    <p><img src="image6.png" width="700" height="350" alt=""></p>
+    <p>Numbers on computers start at <code>0</code> (programmers call these “indexes”). So the first LED is index <code>0</code>, the second is index <code>1</code>, and so on, until the final LED which is index <code>23</code>.</p>
+</div>
+<div class="project-steps__step">
+    <p>The <code>set pixel color</code> blocks tell the microbit which pixels to light, but doesn’t actually tell it to turn them on. So we need to add a <code>[strip] show</code> block, like this:</p>
+    <p><img src="image7.png" width="700" height="350" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Now we want to add the animation. Find the <code>[item] rotate pixels by [1]</code> block, add it to the <code>forever</code> block in your program, and change the <code>[item]</code> to <code>[strip]</code></p>
+    <p><img src="image8.png" width="700" height="200" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Then add a <code>[strip] show</code> block and a <code>pause [100]</code> block after it.</p>
+    <p><img src="image9.png" width="700" height="200" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Download your code, copy it onto the microbit, and try it out, once the light on the back of the microbit stops flashing.</p>
+    <p>The three LEDs will spin around the Zip Halo – they look like a little red snake!</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Challenge <span class="time-estimate">2 minutes</span></h3>
+    <p>How could we change our snake so that it looks like a little <em>multicoloured</em> snake?</p>
+    <p><code>yellow</code>, <code>orange</code>, and <code>red</code> (in that order) are a very nice combination.</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Reacting to movement <span class="time-estimate">5 minutes</span></h3>
+    <p>Let’s tweak our code so that the snake only moves when we frighten it – <strong>by shaking the microbit!</strong></p>
+</div>
+<div class="project-steps__step">
+    <p>Add an <code>on shake</code> block to your program, and put a <code>repeat [4]</code> block inside it.</p>
+    <p><img src="image10.png" width="700" height="170" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>We want our snake to complete a full circle when we shake the microbit. There are 24 LEDs on the Zip Halo, so change the <code>4</code> to a <code>24</code></p>
+    <p><img src="image11.png" width="700" height="170" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Now, move all of the code out of the <code>forever</code> block, and instead, put it into the <code>repeat [24] times</code> block.</p>
+    <p><img src="image12.png" width="700" height="260" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Download your code, and try it out. What happens when you shake the microbit?</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Challenge <span class="time-estimate">2 minutes</span></h3>
+    <p>Try attaching your microbit onto a <strong>wooden horse head</strong>. What happens when you shake it?</p>
+    <p>You can stop here if you want, and <strong>go enjoy more of what Light Night has to offer!</strong></p>
+    <p>But if you’re near the library at 8pm, come find us, and we’ll give you a microbit-powered horse head to wave outside during the Batala Mersey drum performance.</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Extension: Making a colour compass <span class="time-estimate">10 minutes</span></h3>
+    <p><strong>Got more time to play with?</strong> How about a fun extension!</p>
+    <p>Your microbit can react to all sorts of inputs. As well as detecting movement and shaking, <strong>it has a built-in compass</strong>.</p>
+    <p>Let’s make it so that, when you press down both the A and B buttons, your microbit turns into a compass, that changes colour based on which direction you’re facing.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>if … then …</code> block inside the <strong>“Logic”</strong> category, and drag it into your <code>forever</code> block.</p>
+    <p><img src="image13.png" width="700" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>button [A] is pressed</code> block, and plug it into the end of the <code>if …</code> block.</p>
+    <p><img src="image14.png" width="700" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>We want to switch our microbit into compass mode by <strong>pressing both A and B at the same time</strong>. So, click the <code>[A]</code> and change it to <code>[A+B]</code>.</p>
+    <p><img src="image15.png" width="700" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Drag an <code>[item] show color [red]</code> block into your <code>then …</code> block, and change the <code>[item]</code> to <code>[strip]</code>.</p>
+    <p><img src="image16.png" width="700" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Find the plug the <code>compass heading (&deg;)</code> block in the “Input” category, and drag it into your program.</p>
+    <p><img src="image17.png" width="700" height="180" alt=""></p>
+    <p>The compass heading will be a number from 0 to 360, because there are 360 degrees in a circle. We need to translate that into a colour.</p>
+    <p>Handily, there’s a block that accepts a “Hue”, which is a number from 0 to 360, and <strong>will change the LEDs to any colour in the spectrum</strong>, based on where the number comes in that 0–360 range.</p>
+</div>
+<div class="project-steps__step">
+    <p>Find the <code>hue [0] saturation [0] luminosity [0]</code> block in the <strong>“Neopixel”</strong> category, and plug it into the end of your <code>[strip] show colour</code> block.</p>
+    <p><img src="image18.png" width="800" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Plug in the <code>compass heading (&deg;)</code> block after <code>hue</code>, then set the <code>saturation</code> to <code>100</code> and the <code>luminosity</code> to <code>50</code>.</p>
+    <p>When you’re finished, it should look like this:</p>
+    <p><img src="image19.png" width="1000" height="180" alt=""></p>
+</div>
+<div class="project-steps__step">
+    <p>Download your code, and try it out.</p>
+    <p>What happens when you hold down A+B at the same time, while turning around?</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h4>Tip: Is your microbit showing a message that says "Draw a circle"?</h4>
+    <p>If so, <strong>congratulations!</strong> You are using a brand new microbit, and it needs your help working out which direction is North.</p>
+    <p>Spin the microbit around, so that the little pixel in the centre completes a full circle round the edge of the microbit’s display.</p>
+    <p>Once you’ve completed a circle, your microbit will show a smiley face, and then continue with your program. Try pressing A+B and turning around!</p>
+</div>
