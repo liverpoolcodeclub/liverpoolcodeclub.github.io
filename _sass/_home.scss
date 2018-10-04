@@ -115,46 +115,6 @@
   }
 }
 
-.home-microbit {
-  padding: 2em 0;
-  background-size: 100%;
-  background-position: center -10%;
-  background-image: url(/assets/img/microbit-triangle-texture.png), linear-gradient(to left bottom, #42C0C7 30%, #00ED00 100%);
-  background-image: url(/assets/img/microbit-triangle-texture.png), -o-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
-  background-image: url(/assets/img/microbit-triangle-texture.png), -moz-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
-  background-image: url(/assets/img/microbit-triangle-texture.png), -webkit-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
-  background-image: url(/assets/img/microbit-triangle-texture.png), -ms-linear-gradient(left bottom, #42C0C7 30%, #00ED00 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42c0c7', endColorstr='#00ed00',GradientType=1 );
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    padding: 0.5em 1em;
-    background: #fff;
-    color: $color-codeclub-green;
-    font-weight: bold;
-    margin-top: 0.5em;
-    box-shadow: 0.2em 0.2em 0 rgba(#000, 0.2);
-    border: none;
-
-    &:hover, &:focus {
-      transform: translate(0, -0.1em);
-      box-shadow: 0.3em 0.4em 0 rgba(#000, 0.1);
-    }
-  }
-
-  @media (min-width: $grid-float-breakpoint) {
-    padding: 3em 0;
-
-    h2 {
-      margin-top: 0;
-    }
-  }
-}
-
 .newsletter-signup {
   padding-top: 3em;
   padding-bottom: 3em;
