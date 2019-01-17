@@ -119,6 +119,57 @@ img {
   }
 }
 
+.schedule-table {
+  margin-top: 2em;
+  padding: 1em;
+  background: #fff;
+
+  h2 {
+    margin: 0;
+  }
+
+  table {
+    margin: 1em 0;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  td + td + td {
+    width: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  td.text-muted {
+    font-style: italic;
+  }
+
+  td a {
+    display: block;
+    margin: -8px;
+    padding: 8px;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    padding: 2em;
+
+    table {
+      margin: 1.5em 0;
+    }
+
+    .table tr td {
+      padding: 12px 8px;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding: 3em;
+  }
+}
+
 .newsletter-signup {
   padding-bottom: 3em;
   border-bottom: 1px solid $color-codeclub-lightgreen;
