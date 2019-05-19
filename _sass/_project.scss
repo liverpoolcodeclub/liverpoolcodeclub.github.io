@@ -104,7 +104,7 @@
 }
 
 .project-steps__step--completed {
-  p, li, th, td {
+  p, li, dd, dt, th, td, pre {
     text-decoration: line-through;
     color: #888;
   }
@@ -223,5 +223,63 @@
     &:before {
         content: "—";
         margin-right: 0.2em;
+    }
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(275px, 1fr) );
+    grid-gap: 2em;
+    margin: 2em 0;
+
+    & > * {
+        display: block;
+        padding: 1.5em;
+        background-color: $well-bg;
+        border: 1px solid $well-border;
+        border-radius: $border-radius-base;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+            color: #fff;
+
+            & > * {
+                color: inherit;
+            }
+        }
+
+        & > :first-child {
+            margin-top: 0;
+        }
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            margin-bottom: 0.1em;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    }
+}
+
+.twine-passage-details {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-gap: 1em 1.5em;
+    margin: 1.5em 0;
+
+    dt {
+        margin: 0.5em 0; // match the <pre> in the sibling <dd>
+    }
+
+    pre {
+        margin: 0;
     }
 }

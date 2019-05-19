@@ -1,0 +1,318 @@
+---
+layout: project
+title: "Interactive text adventures with Twine"
+authors: >
+  Project designed and written by
+  <a href="https://twitter.com/zarino" rel="author">Zarino Zappia</a>
+---
+<div class="project-steps__info">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>In this project, we’ll make an <a href="https://en.wikipedia.org/wiki/Adventure_game#Text_adventures_and_interactive_fiction">interactive text adventure</a>, using the online editor, <a href="https://twinery.org/">Twine</a>.</p>
+            <p>Many of the earliest computer games were text adventures. Because they only used text, and no graphics, they could run on even the simplest computers.</p>
+            <p>These days, we can use free editors like Twine to generate point-and-click text adventures that run just like webpages.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="example.png" width="600" height="450" alt="" style="margin: 0">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h2>Play some games <span class="time-estimate">20 minutes</span></h2>
+    <p>Before you write your own text adventure, spend a few minutes playing some existing ones, so you can get a feel for how they work, and what’s possible.</p>
+    <p>While you’re playing, think about:</p>
+    <ul>
+        <li>What makes the game enjoyable?</li>
+        <li>How are you moving around the game?</li>
+        <li>Are you just reading, or do you feel like you’re interacting with the world in the story?</li>
+    </ul>
+    <div class="examples-grid">
+        <a target="_blank" href="http://bbcmicro.co.uk//jsbeeb/play.php?autoboot&disc=http://bbcmicro.co.uk//gameimg/discs/2156/Disc999-LostFrog.ssd">
+            <h3 style="margin-top: 0;">Lost Frog</h3>
+            <p>A classic text adventure for the BBC Micro, written by Anita Straker in 1984. Note how you have to type words to move around. If you get stuck, try typing <code>help</code>.</p>
+        </a>
+        <a target="_blank" href="the-adventure-of-barry.html">
+            <h3 style="margin-top: 0;">The Adventure of Barry</h3>
+            <p>A nice, simple starter game, written in Twine. Introduces a few of the tricks of the genre including dead ends, required items, and multiple endings.</p>
+        </a>
+        <a target="_blank" href="http://planning.mcqn.com/">
+            <h3 style="margin-top: 0;">Tocky Tales</h3>
+            <p>Developed by Adrian McEwen, and based around Toxteth Library. Note how he uses photos to make the walk around the library feel like an adventure.</p>
+        </a>
+        <a target="_blank" href="http://textadventuretime.co.uk/LTS_Main.html">
+            <h3 style="margin-top: 0;">Northern Powerhouse: Last Towns Standing</h3>
+            <p>An epic sci-fi game made by 16-19 yr old residents of Wigan, Hull and Blackburn.</p>
+        </a>
+        <a target="_blank" href="https://selectadecision.info/">
+            <h3 style="margin-top: 0;">You Will Select a Decision</h3>
+            <p>Written in the style of a “Choose your own adventure” <em>book</em>, with a Soviet parody twist.</p>
+        </a>
+        <a target="_blank" href="http://aliendovecote.com/uploads/twine/howlingdogs/howlingdogs.html">
+            <h3 style="margin-top: 0;">Howling Dogs</h3>
+            <p>Dystopian sci-fi in a more experimental, less traditional text adventure format.</p>
+        </a>
+    </div>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h2>Write your first Twine game <span class="time-estimate">30 minutes</span></h2>
+    <p>Now you’ve seen some inspiration, it’s time to make a game of your own.</p>
+</div>
+<div class="project-steps__step">
+    <p>Visit <strong><a target="_blank" href="https://twinery.org/2">twinery.org/2</a></strong>.</p>
+    <p>(If it shows you a “Tell me more” introductory message, you can skip it.)</p>
+</div>
+<div class="project-steps__step">
+    <p>Create a new story using the green <strong>“+&nbsp;Story”</strong> button on the right.</p>
+    <img src="twine-home-empty.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+<div class="project-steps__step">
+    <p>Name your story <strong>“Bang”</strong>.</p>
+    <img src="twine-new-bang.png" width="1138" height="580" alt="">
+</div>
+<div class="project-steps__info">
+    <p>Twine will show you the story map of your game.</p>
+    <img src="twine-map-empty.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+    <ul>
+        <li>At the bottom left is your <strong>story menu</strong>, where you can edit advanced settings about your game.</li>
+        <li>At the bottom right is a toolbar that lets you change your zoom level, test your game out, and create new passages with the <strong>“+&nbsp;Passage”</strong> button.</li>
+        <li>In the centre is a single <strong>“Untitled Passage”</strong>.</li>
+    </ul>
+    <p>“Passage” is a word we don’t use very often these days, but it means a “part” of a larger book (sometimes you might have heard people talking about a “passage of text”).</p>
+    <p>In this case, you can imagine these “passages” like pages, or rooms. Your game is going to lead players through these interlinked pages or rooms, to discover more of the story, and to reach the ending – or endings!</p>
+</div>
+<div class="project-steps__step">
+    <p>Double-click the <strong>Untitled Passage</strong> to edit it.</p>
+    <img src="twine-untitled-passage.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Creating your first passage</h3>
+</div>
+<div class="project-steps__step">
+    <p>The edit screen lets you give your passage a “title” (which isn’t visible to players, and is how you’ll refer to this passage when you create links to it) and a “body” (which is what will appear on the player’s screen).</p>
+    <p>For now, let’s create a passage with the following details:</p>
+    <dl class="twine-passage-details">
+        <dt><strong>Title</strong></dt>
+        <dd><pre>Woken</pre></dd>
+        <dt><strong>Body</strong></dt>
+        <dd><pre>You are woken up by a bang.<br>Your room is dark, but bright sunlight filters through the curtains.</pre></dd>
+    </dl>
+</div>
+<div class="project-steps__step">
+    <p>Press the cross in the top corner of the edit screen, or the <code>Esc</code> button on your keyboard, to get back to the story map.</p>
+    <img src="twine-map-one-passage.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+<div class="project-steps__step">
+    <p>Try out your game! Press the <strong>“Play”</strong> button in the bottom right corner of the map view.</p>
+    <img src="twine-game-basic.png" width="1138" height="580" alt="">
+    <p>Your game will open in a new window. But there’s not much to do, because it only contains a single passage.</p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Adding a second passage</h3>
+</div>
+<div class="project-steps__step">
+    <p>Switch back to your map view, and use the green <strong>“+&nbsp;Passage”</strong> button to create a new passage. Then double-click the <strong>Untitled Passage</strong> to edit it.</p>
+    <img src="twine-map-two-passages-one-untitled.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+<div class="project-steps__step">
+    <p>Fill in the following details:</p>
+    <dl class="twine-passage-details">
+        <dt><strong>Title</strong></dt>
+        <dd><pre>Phone</pre></dd>
+        <dt><strong>Body</strong></dt>
+        <dd><pre>The phone screen lights up as you lift it.<br>The time reads: 10:13<br>[[Put phone down->Woken]]</pre></dd>
+    </dl>
+    <p>The last line here creates a link <em>back</em> to the passage titled <strong>“Woken”</strong> (our first passage), and the text displayed in the link will be <strong>“Put phone down”</strong>.</p>
+</div>
+<div class="project-steps__step">
+    <p>Get back to the story map, and double-click the <strong>“Woken”</strong> passage to edit it.</p>
+    <img src="twine-map-two-passages.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+<div class="project-steps__step">
+    <p>Update the passage content so it looks like this:</p>
+    <dl class="twine-passage-details">
+        <dt><strong>Title</strong></dt>
+        <dd><pre>Woken</pre></dd>
+        <dt><strong>Body</strong></dt>
+        <dd><pre>You are woken up by a bang.<br>Your room is dark, but bright sunlight filters through the curtains.<br>[[Check the time on your phone->Phone]]</pre></dd>
+    </dl>
+    <p>All we’ve done is add a link on the last line, that links to the new <strong>“Phone”</strong> passage we just created.</p>
+</div>
+<div class="project-steps__step">
+    <p>Now try your game out. See how you can move back and forth between the two passages.</p>
+    <img src="twine-game-with-link.png" width="1138" height="580" alt="">
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h3>Adding a few more passages</h3>
+</div>
+<div class="project-steps__step">
+    <p>Your game is only just starting. Try adding a few more passages, to develop the story.</p>
+    <p>Not sure what should happen next? Here are a few ideas:</p>
+    <ul>
+        <li>A weird-looking alien in a suit bursts in through the door, and seems surprised to see you.</li>
+        <li>You look out the window to see that your neighbour’s house has been demolished, in a single swipe, by a gigantic monster.</li>
+        <li>You rush downstairs to find your experimental time machine (made out of cardboard boxes and tin foil) has somehow opened a rift in the space-time continuum.</li>
+    </ul>
+    <p>If you want to make text stand out in your passages, you can add some cool effects:</p>
+    <ul>
+        <li><code>''Bold''</code></li>
+        <li><code>//Italic//</code></li>
+        <li><code>* List item</code></li>
+        <li><code>(colour: red)[Coloured text]</code></li>
+        <li><code>(background: red)[Coloured background]</code></li>
+        <li><code>(text-style: "blur")[Blurred]</code></li>
+        <li><code>(text-style: "rumble")[Rumbling]</code></li>
+        <li><code>(text-style: "shudder")[Shuddering]</code></li>
+        <li><code>(text-style: "fade-in-out")[Fading in and out]</code></li>
+    </ul>
+    <img src="twine-game-text-effects.png" width="1138" height="580" alt="">
+    <p><a href="https://twine2.neocities.org/#macro_text-style">See more styles.</a></p>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h2>Try out your neighbour’s game <span class="time-estimate">20 minutes</span></h2>
+    <p>Feedback from other people can help you make your games really great.</p>
+</div>
+<div class="project-steps__step">
+    <p>Swap with one of the people next to you, and try out their game, while they try out yours.</p>
+    <img src="kids-having-fun.jpg" width="1280" height="699" alt="">
+</div>
+<div class="project-steps__step">
+    <p>When you’re both done, give them some feedback:</p>
+    <ul>
+        <li>What did you like about the game?</li>
+        <li>Was it a good story?</li>
+        <li>Were you able to find your way around it?</li>
+        <li>Is there anything you would change?</li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="project-steps__info">
+    <h2>Keep writing, or start an entirely new game <span class="time-estimate">60 minutes</span></h2>
+    <p>We’ve only scratched the surface of what’s possible with Twine.</p>
+    <p>The code you’ve been writing today is a specialised language called <a href="https://twine2.neocities.org/">Harlowe</a>, and it’s got all the power and flexibility of a full programming language like Python or JavaScript.</p>
+    <p>You’ve got time now to either improve your existing game, or start a new one.</p>
+    <p>If you need some ideas, use one of the <a href="http://www.scholastic.com/teachers/story-starters/">four random story generators here</a> – Pick a genre, then enter a name and click the "4–6th" button. Pull "Spin" and see what comes up!</p>
+    <p>Here are a few <em>advanced techniques</em> you might want to try out:</p>
+    <ol>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="#stylesheets">Stylesheets</a></li>
+        <li><a href="#download">Downloading your game</a></li>
+    </ol>
+</div>
+
+<hr>
+
+<div class="project-steps__info" id="variables">
+    <h3>Variables: Counting items, or recording player choices</h3>
+    <p>If you’ve done any coding before (for example, in Scratch) you will probably have used variables to store data that updates while the game is being played.</p>
+    <p>For example, you could use a variable to store:</p>
+    <ul>
+        <li>The player’s current score</li>
+        <li>The player’s health (assuming they can get injured!)</li>
+        <li>The number of special items they’ve collected</li>
+    </ul>
+</div>
+<div class="project-steps__step">
+    <p>Let’s add a bit of code that increases a variable by 1 each time the passage is displayed. Here’s how you’d do it in Harlowe:</p>
+    <pre>(set $visits to $visits + 1)</pre>
+</div>
+<div class="project-steps__step">
+    <p>If we want to display the current value of our <code>$visits</code> variable, we can do it like this:</p>
+    <pre>You have visited the passage $visits times.</pre>
+</div>
+<div class="project-steps__step">
+    <p>You can also ask the player to enter a value that then gets saved into the variable. For example, if you wanted to ask the player for their name, and then display it on the screen:</p>
+    <pre>(set: $name to (prompt: "What is your name?", "Example McExampleface"))<br>Hello, $name!</pre>
+</div>
+
+<hr>
+
+<div class="project-steps__info" id="conditions">
+    <h3>Conditions: Changing what happens, based on past choices</h3>
+    <p>Once you’ve saved information in a variable, you can do more than just printing it out.</p>
+</div>
+<div class="project-steps__step">
+    <p>You can set a short phrase to display only if a condition is true, for example:</p>
+    <pre>(if: $visits is 3)[You visited the passage exactly three times]</pre>
+</div>
+<div class="project-steps__step">
+    <p>Or you can use an if-else block to display more than one thing, for example:</p>
+    <pre>(if: $visits < 3)[
+    Visit [[this room]] three times to discover a secret.
+](else:)[
+    You visited three times. Reward yourself by accessing this [[Secret treasure]].
+]</pre>
+</div>
+<div class="project-steps__step">
+    <p>Until you assign a value to a variable, it will be equal to zero (<code>0</code>). We can use this fact to display different text based on whether a variable has been set. For example, with our name prompt from earlier:</p>
+    <pre>(if: $name is not 0)[
+    Hello, $name!
+](else:)[
+    Hello, stranger!
+]</pre>
+</div>
+
+<hr>
+
+<div class="project-steps__info" id="stylesheets">
+    <h3>Stylesheets: Change the look of your game</h3>
+    <p>Your game is really just a web page, so you can edit its CSS stylesheet to change how it looks.</p>
+</div>
+<div class="project-steps__step">
+    <p>You can specify custom CSS styles for your game by selecting <strong>“Edit Story Stylesheet”</strong> from the story menu in the bottom left corner of the story map screen.</p>
+    <img src="twine-map-option-stylesheet.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+</div>
+<div class="project-steps__step">
+    <p>For example, you could add this CSS to make your story look like it’s been made using an old paper typewriter:</p>
+    <pre>tw-story {
+    font-family: monospace;
+    background-color: #efe9da;
+    color: #000;
+}</pre>
+    <img src="twine-game-custom-css.png" width="1138" height="580" alt="">
+</div>
+<div class="project-steps__step">
+    <p>When it comes to fonts, you can use any font that’s installed on your computer. Or you can include a font from <a href="https://fonts.google.com">Google Fonts</a>, eg:</p>
+    <pre>@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+tw-story {
+    font-family: Anton, sans-serif;
+}</pre>
+    <p><a href="http://twinery.org/wiki/twine2:change_the_font_colors_or_appearance">Read more about styling.</a></p>
+</div>
+
+<hr>
+
+<div class="project-steps__info" id="download">
+    <h3>Download your code to take home</h3>
+    <p>Your game is only stored on the web browser and computer you’re currently using.</p>
+    <p>If you want to take your game home with you, you’ll need to download it as a <code>.html</code> file.</p>
+</div>
+<div class="project-steps__step">
+    <p>To do this, select <strong>“Publish to File”</strong> from the story menu in the bottom left corner of the story map screen. You can then find the <code>.html</code> file in your Downloads folder.</p>
+    <img src="twine-map-option-download.png" width="1138" height="580" alt="" style="border: 1px solid #ddd;">
+    <p>When you get home, you can import that <code>.html</code> file into Twinery.org, to pick up where you left off.</p>
+</div>
+<div class="project-steps__step">
+    <p>To do this, visit <strong><a href="https://twinery.org/2/">twinery.org/2</a></strong> and then select <strong>“Import From File”</strong> on the right-hand side, below the green <strong>“+&nbsp;Story”</strong> button.</p>
+</div>
